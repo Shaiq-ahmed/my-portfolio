@@ -110,7 +110,7 @@ body.menu-open {
         text-decoration: none;
         position: fixed; /* Keep it fixed */
         left: 0; /* Align to the left edge */
-        top:60px; /* Adjust based on your navbar height */
+        top:70px; /* Adjust based on your navbar height */
         width: 100%; /* Full width */
         max-width: calc(100% -40px); /* Prevent overflow with some padding */
         padding-left: 30px; /* Add padding to the left */
@@ -139,6 +139,7 @@ body.menu-open {
         width: 100%;
         border: 0;
         border-top: 1px solid #4B5563;
+        margin-right: 10px ;
         /* margin: 10px 10px; Add margin to top/bottom and left/right */
     }
 
