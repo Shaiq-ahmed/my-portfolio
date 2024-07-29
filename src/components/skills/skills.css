@@ -48,7 +48,7 @@
     align-items: center;
     flex-wrap:wrap ;
     justify-content: center; /* Center the items horizontally */
-    width: 80%;
+    width: auto;
 
     margin-bottom: 15px;
 }

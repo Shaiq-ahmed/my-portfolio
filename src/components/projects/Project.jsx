@@ -16,6 +16,7 @@ const Project = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+  
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -91,7 +92,7 @@ const Project = () => {
         initial="hidden"
         animate={mainControls}
         variants={fadeIn}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }} // Slower fade-in with easing
       >
         <div className="touch-button">
           <p>Work</p>
@@ -106,7 +107,7 @@ const Project = () => {
             initial="hidden"
             animate={mainControls}
             variants={cardVariants}
-            transition={{ duration: 1, delay: index * 0.2 }} // Staggered animation
+            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeInOut" }} // Staggered animation with easing
             whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
           >
             <div className="left">
