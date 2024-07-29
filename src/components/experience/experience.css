@@ -106,7 +106,7 @@
 }
 @media (max-width: 767px) {
     .task-details {
-        width: 100%;
+        width: 100% !important;
         margin: auto 20px;
         /* margin-right:10px ;
         margin-left: 0px; */
