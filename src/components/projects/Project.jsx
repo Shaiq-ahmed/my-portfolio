@@ -113,7 +113,7 @@ const Project = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                style={{ height: "100%", width: "auto", objectFit: "cover" }} // Use cover to maintain aspect ratio
+                className="left-image"
               />
             </div>
             <div className="right">
