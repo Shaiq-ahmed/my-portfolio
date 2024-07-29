@@ -90,11 +90,11 @@ body.menu-open {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 50px;
+        top: 60px;
         right: 0;
         height: 100vh;
         width: 100%;
-        height: calc(100vh - 50px); /* Full height minus the navbar height */
+        height: calc(100vh - 60px); /* Full height minus the navbar height */
         background-color: #ffffff;
         padding: 20px;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
@@ -110,7 +110,7 @@ body.menu-open {
         text-decoration: none;
         position: fixed; /* Keep it fixed */
         left: 0; /* Align to the left edge */
-        top:50px; /* Adjust based on your navbar height */
+        top:60px; /* Adjust based on your navbar height */
         width: 100%; /* Full width */
         max-width: calc(100% -40px); /* Prevent overflow with some padding */
         padding-left: 30px; /* Add padding to the left */
@@ -136,10 +136,10 @@ body.menu-open {
         
     }
     .divider {
-        width: calc(100% - 50px); /* Adjust width to account for margins */
+        width: 100%;
         border: 0;
         border-top: 1px solid #4B5563;
-        margin: 10px 10px; /* Add margin to top/bottom and left/right */
+        /* margin: 10px 10px; Add margin to top/bottom and left/right */
     }
 
 }
