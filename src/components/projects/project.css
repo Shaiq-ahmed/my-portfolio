@@ -118,9 +118,11 @@
   -ms-border-radius: 12px 12px 0px 0px;
   -o-border-radius: 12px 12px 0px 0px;
 }
-.left img{
-  height: 150px;
-  width: 150px;
+.left-image{
+  height: 200px; 
+  width: 200px;
+  object-fit: cover;
+
 }
     .right{
         width: 100%;
