@@ -136,11 +136,10 @@ body.menu-open {
         
     }
     .divider {
-        width: 100%;
+        width: calc(100% - 20px);
         border: 0;
         border-top: 1px solid #4B5563;
-        margin-right: 10px ;
-        /* margin: 10px 10px; Add margin to top/bottom and left/right */
+        margin: 10px 10px; 
     }
 
 }
