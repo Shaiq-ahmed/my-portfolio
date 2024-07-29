@@ -1,0 +1,9 @@
+
+body{
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Helvetica Neue"; */
+  font-family: __Inter_aaf875, __Inter_Fallback_aaf875, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: "Roboto Flex", sans-serif; */
+}

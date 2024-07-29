@@ -1,0 +1,107 @@
+.container {
+    /* background-color: #ffff; */
+    max-height: auto;
+    min-height: 300px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.touch-button {
+    border-radius: 12px;
+    background-color: #E5E7EB;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+
+}
+
+.touch-button p {
+    padding: 2px 16px;
+    color: #4B5563;
+    font-weight: bold;
+}
+
+.contact-main-text {
+    color: #4B5563;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    text-align: center;
+
+}
+
+.email {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+
+}
+
+.react-icon {
+    font-size: 24px;
+    color: #4B5563;
+
+}
+
+.email h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 10px;
+
+}
+
+.icons {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.react-icon-small {
+    font-size: 16px;
+    color: #4B5563;
+    margin-right: 15px;
+    font-weight: bold;
+
+}
+
+.end-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4B5563;
+    text-align: center;
+
+}
+
+
+@media (max-width: 768px) {
+    .email h3 {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+}
+
+/* Adjust font size and margin for small screens */
+@media (max-width: 480px) {
+    .email h3 {
+        font-size: 18px;
+        margin: 0 5px;
+    }
+}

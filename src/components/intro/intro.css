@@ -1,0 +1,148 @@
+.intro-container {
+    background-color: #ffffff;
+    max-height: auto;
+    min-height: 300px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.intro-portion {
+    margin: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.intro-left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.intro-name {
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Ensure single-line display */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+.intro-para {
+    font-size: 14px;
+    color: #808080;
+    text-align: left;
+
+
+}
+
+.intro-mini-details {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-mini-details-2 {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-mini-details p {
+    color: #808080;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+}
+
+.intro-mini-details-2 p {
+    color: #808080;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+}
+
+.bold-icon {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #4B5563;
+    font-size: 18px;
+
+}
+
+.icons-intro{
+    margin-top: 20px;
+    display: flex;
+}
+
+.intro-right{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    
+}
+.intro-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+}
+
+.intro-wave{
+    display: flex;
+    color: rgb(202, 202, 2);
+    margin-left: 5px;
+}
+
+@media (max-width: 968px) {
+    .intro-name {
+        font-size: 32; /* Further adjust font size for very small screens */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-portion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-left, .intro-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro-right {
+        order: -1; /* Move the image part to the top */
+        margin-bottom: 20px;
+    }
+
+    .intro-name {
+        font-size: 30px;
+    }
+
+    .intro-para {
+        font-size: 16px;
+    }
+    .intro-name {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-name {
+        font-size: 24px; /* Further adjust font size for very small screens */
+    }
+}

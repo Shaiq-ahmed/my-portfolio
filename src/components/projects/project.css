@@ -1,0 +1,122 @@
+.container-project {
+  background-color: #ffffff;
+  max-height: auto;
+  min-height: 300px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.touch-button {
+  border-radius: 12px;
+  background-color: #e5e7eb;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.touch-button p {
+  padding: 2px 16px;
+  color: #4b5563;
+  font-weight: bold;
+}
+
+.work-main-text {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.project-card {
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 70%;
+  border-radius: 12px;
+  display: flex;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+}
+.left {
+  background-color: #e5e7eb;
+  width: 50%;
+  padding: 20px;
+  border-radius: 12px 0px 0px 12px;
+  -webkit-border-radius: 12px 0px 0px 12px;
+  -moz-border-radius: 12px 0px 0px 12px;
+  -ms-border-radius: 12px 0px 0px 12px;
+  -o-border-radius: 12px 0px 0px 12px;
+}
+.right {
+  width: 50%;
+  color: #4b5563;
+  padding: 20px;
+  p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  h4 {
+    font-size: 16px;
+    margin-top: 5px;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.tools {
+  border-radius: 12px;
+  /* background-color: #E5E7EB; */
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    border-radius: 12px;
+    background-color: #e5e7eb;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 6px 10px;
+  }
+}
+
+.link{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width:768px){
+    .project-card{
+        /* display: flex; */
+        flex-direction: column;
+    }
+    .left{
+  width: 100%;
+  height:300px;
+  border-radius: 12px 12px 0px 0px;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px;
+  -ms-border-radius: 12px 12px 0px 0px;
+  -o-border-radius: 12px 12px 0px 0px;
+}
+    .right{
+        width: 100%;
+    }
+}
