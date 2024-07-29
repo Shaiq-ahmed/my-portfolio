@@ -113,7 +113,7 @@ body.menu-open {
         top: 80px; /* Adjust based on your navbar height */
         width: 100%; /* Full width */
         max-width: calc(100% - 20px); /* Prevent overflow with some padding */
-        padding-left: 10px; /* Add padding to the left */
+        padding-left: 30px; /* Add padding to the left */
         overflow-x: hidden; /* Hide horizontal overflow */
     }
 
@@ -131,7 +131,7 @@ body.menu-open {
         display: block;
         /* width: auto; */
         margin-left: -7px;
-        margin-top: 20px;
+        margin-top:15px;
         text-decoration: none;
         
     }
