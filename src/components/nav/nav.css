@@ -108,7 +108,7 @@ body.menu-open {
     .nav-list.show {
         display: flex;
         text-decoration: none;
-        width: auto;
+        margin: auto;
 
     }
 
