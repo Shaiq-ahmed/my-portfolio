@@ -94,7 +94,7 @@ body.menu-open {
         right: 0;
         height: 100vh;
         width: 100%;
-        height: calc(100vh - 60px); /* Full height minus the navbar height */
+        height: calc(100vh - 70px); /* Full height minus the navbar height */
         background-color: #ffffff;
         padding: 20px;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
@@ -136,10 +136,10 @@ body.menu-open {
         
     }
     .divider {
-        width: auto;
+        width: calc(100% - 20px); /* Adjust width to account for margins */
         border: 0;
         border-top: 1px solid #4B5563;
-        /* margin: 10px 10px 0 10px; */
+        margin: 10px 10px; /* Add margin to top/bottom and left/right */
     }
 
 }
