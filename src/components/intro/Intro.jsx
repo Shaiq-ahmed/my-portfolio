@@ -91,7 +91,7 @@ const Intro = () => {
                             <path fill="#4B5563" d="M41.7,-14.9C48.8,8.3,45.7,33.5,31.8,43.6C17.9,53.6,-6.9,48.6,-29.3,33.9C-51.6,19.1,-71.6,-5.3,-66.3,-26.1C-61.1,-46.8,-30.5,-63.9,-6.6,-61.7C17.3,-59.6,34.5,-38.2,41.7,-14.9Z" transform="translate(100 100)" />
                             <image className='intro-image' xlinkHref={profile} />
                         </svg> */}
-          <svg
+          {/* <svg
             className="intro-image-container"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +105,39 @@ const Intro = () => {
                 />
               </clipPath>
             </defs>
+
+          </svg> */}
+          <svg
+            id="sw-js-blob-svg"
+            className="intro-image-container"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+          >
+            <defs>
+              <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                <stop
+                  id="stop1"
+                  stop-color="rgba(236.91, 141.993, 12.112, 1)"
+                  offset="0%"
+                ></stop>
+                <stop
+                  id="stop2"
+                  stop-color="rgba(239.187, 152.543, 9.527, 1)"
+                  offset="100%"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sw-gradient)"
+              d="M27.5,-33.8C33.6,-27.6,35.3,-17,35.5,-7.5C35.6,2.1,34.4,10.6,30.6,18C26.7,25.4,20.2,31.6,12.8,33.7C5.4,35.7,-3,33.6,-11.3,30.7C-19.5,27.8,-27.6,24.2,-33.1,17.7C-38.5,11.2,-41.3,1.7,-39.4,-6.5C-37.5,-14.8,-30.8,-21.8,-23.5,-27.8C-16.1,-33.8,-8.1,-38.8,1.3,-40.3C10.7,-41.9,21.3,-40,27.5,-33.8Z"
+              width="100%"
+              height="100%"
+              transform="translate(50 50)"
+              stroke-width="0"
+              style="transition: all 0.3s ease 0s;"
+              stroke="url(#sw-gradient)"
+            ></path>
 
             <image
               className="intro-image"
