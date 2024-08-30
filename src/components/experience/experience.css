@@ -71,6 +71,12 @@
     background-color: #d3d5d6;
 }
 
+.company-logo2 {
+    max-height: 50px;
+    min-height: 20px;
+    /* background-color: #d3d5d6; */
+}
+
 .position {
     font-weight: bold;
     font-size: 18px;

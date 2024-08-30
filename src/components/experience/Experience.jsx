@@ -84,7 +84,7 @@ const Experience = () => {
           whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
         >
           <div className="details-header">
-            <img className="company-logo" src={appickLogo} alt="appick" />
+            <img className="company-logo2" src={appickLogo} alt="appick" />
             <p className="position">Web Developer - Intern</p>
             <p className="date">March 2021 - May 2021 </p>
           </div>

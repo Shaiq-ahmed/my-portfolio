@@ -95,13 +95,8 @@ const Intro = () => {
             className="intro-image-container"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
+            style={{ fill: "#d3d5d6" }} // Change this to match your desired background color
           >
-            <path
-              fill="#d3d5d6"
-              d="M44.7,-64C57.2,-52.3,66.3,-38.4,69.9,-23.6C73.5,-8.8,71.6,6.9,65.4,19.8C59.2,32.7,48.8,42.7,37.2,47.8C25.5,52.9,12.8,53,1.4,51.1C-10,49.1,-19.9,45.1,-34,40.8C-48,36.6,-66.2,32,-75.6,20.5C-85,8.9,-85.6,-9.6,-79,-24.3C-72.3,-39.1,-58.4,-50.1,-44,-61.2C-29.6,-72.2,-14.8,-83.4,0.6,-84.2C16,-85.1,32.1,-75.7,44.7,-64Z"
-              transform="translate(100 100)"
-            />
-
             <defs>
               <clipPath id="clip-path">
                 <path
