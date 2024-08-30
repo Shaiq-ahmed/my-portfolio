@@ -68,6 +68,7 @@
 .company-logo {
     max-height: 50px;
     min-height: 20px;
+    background-color: #d3d5d6;
 }
 
 .position {
