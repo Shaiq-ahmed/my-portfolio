@@ -4,7 +4,7 @@ import "./intro.css";
 import { GrLocation } from "react-icons/gr";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { RxDotFilled } from "react-icons/rx";
-import profile from "../../assests/image.png";
+import profile from "../../assests/IMG_2547.JPG";
 import { PiHandWavingDuotone } from "react-icons/pi";
 
 const Intro = () => {
@@ -53,11 +53,11 @@ const Intro = () => {
             <PiHandWavingDuotone className="intro-wave" />
           </h1>
           <p className="intro-para">
-            I am a passionate software engineer with over 1.5 years of experience
-            specializing in backend development. Recently, I have expanded my
-            skill set to include full-stack development using the MERN stack. I
-            am dedicated to creating efficient, scalable, and user-friendly web
-            applications.
+            I am a passionate software engineer with over 1.5 years of
+            experience specializing in backend development. Recently, I have
+            expanded my skill set to include full-stack development using the
+            MERN stack. I am dedicated to creating efficient, scalable, and
+            user-friendly web applications.
           </p>
           <div className="intro-mini-details">
             <p>
@@ -71,10 +71,13 @@ const Intro = () => {
             </p>
           </div>
           <div className="icons-intro">
-            <a href="https://github.com/Shaiq-ahmed"><FaGithub className="react-icon-small" /></a>
-            <a href="https://www.linkedin.com/in/shaiq-ahmed-bab208240"><FaLinkedin className="react-icon-small" /></a>
-            
-            
+            <a href="https://github.com/Shaiq-ahmed">
+              <FaGithub className="react-icon-small" />
+            </a>
+            <a href="https://www.linkedin.com/in/shaiq-ahmed-bab208240">
+              <FaLinkedin className="react-icon-small" />
+            </a>
+
             {/* <FaInstagram className="react-icon-small" /> */}
           </div>
         </motion.div>
