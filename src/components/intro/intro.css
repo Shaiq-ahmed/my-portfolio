@@ -97,6 +97,7 @@
 .intro-image {
     width: 200px; /* Adjust size as needed */
     height: 200px; /* Adjust size as needed */
+    border: 1px solid ;
 }
 
 .intro-wave{

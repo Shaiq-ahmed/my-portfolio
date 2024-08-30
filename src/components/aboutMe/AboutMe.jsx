@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import "./aboutme.css";
-import image from "../../assests/pixelcut-export.png";
+import image from "../../assests/img3.png";
 
 const AboutMe = () => {
   const ref = useRef(null);
@@ -60,10 +60,11 @@ const AboutMe = () => {
               transition={{ duration: 0.5, delay: 4 * 0.2 }} // Staggered animation
             >
               <p>
-                I completed a Bachelor of Engineering in <b>Computer Systems</b> from
-                <b> NED University </b>in 2022. Since then, I have been building and
-                enhancing my skills in web development, focusing primarily on
-                backend technologies. My journey into full-stack development
+                I completed a Bachelor of Engineering in <b>Computer Systems</b>{" "}
+                from
+                <b> NED University </b>in 2022. Since then, I have been building
+                and enhancing my skills in web development, focusing primarily
+                on backend technologies. My journey into full-stack development
                 began with learning the MERN stack, and I have been passionate
                 about creating comprehensive web solutions ever since.
               </p>
