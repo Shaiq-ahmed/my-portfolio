@@ -93,7 +93,7 @@ const Intro = () => {
                         </svg> */}
           <div className="intro-image-container">
             <svg
-              className="intro-image-svg"
+              className="intro-image"
               viewBox="0 0 200 200"
               xmlns="http://www.w3.org/2000/svg"
             >
