@@ -25,7 +25,7 @@ const AboutMe = () => {
   });
 
   return (
-    <div className="container-about" id="about" ref={ref}>
+    <div className="container-about " id="about" ref={ref}>
       <motion.div
         className="about"
         initial="hidden"

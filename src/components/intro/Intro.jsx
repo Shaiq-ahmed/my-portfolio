@@ -34,7 +34,7 @@ const Intro = () => {
   }, [isInView, mainControls]);
 
   return (
-    <div className="intro-container">
+    <div className="intro-container ">
       <motion.div
         className="intro-portion"
         ref={ref}

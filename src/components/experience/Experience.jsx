@@ -25,7 +25,7 @@ const Experience = () => {
   }, [isInView]);
 
   return (
-    <div className="container-experience" ref={ref} id="work">
+    <div className="container-experience " ref={ref} id="work">
       <div className="experience">
         <div className="touch-button">
           <p>Experience</p>
@@ -36,7 +36,7 @@ const Experience = () => {
         {/* <div className='container-work-experience'> */}
         <motion.div
           key={""}
-          className="container-work-experience"
+          className="container-work-experience element"
           variants={containerVariants}
           initial="hidden"
           animate={mainControls}

@@ -25,7 +25,8 @@
     margin-bottom: 10px;
     margin-top: 5px;
     font-size: 12px;
-
+    /* position: sticky;
+    z-index: 10; */
 }
 
 .touch-button p {
