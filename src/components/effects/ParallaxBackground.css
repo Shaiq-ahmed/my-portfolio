@@ -1,0 +1,226 @@
+/* Parallax Background */
+.parallax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  will-change: transform;
+}
+
+/* Layer 1 - Background elements */
+.layer-1 {
+  z-index: -3;
+}
+
+.layer-1 .element-1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.05), transparent);
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.layer-1 .element-2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.04), transparent);
+  border-radius: 50%;
+  top: 60%;
+  right: 15%;
+  animation: pulse 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.layer-1 .element-3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.03), transparent);
+  border-radius: 50%;
+  bottom: 30%;
+  left: 20%;
+  animation: pulse 10s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Layer 2 - Medium elements */
+.layer-2 {
+  z-index: -2;
+}
+
+.layer-2 .element-4 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, rgba(0, 255, 136, 0.08), transparent);
+  border-radius: 20px;
+  top: 40%;
+  left: 70%;
+  animation: rotate 20s linear infinite;
+}
+
+.layer-2 .element-5 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, rgba(255, 107, 0, 0.06), transparent);
+  border-radius: 15px;
+  top: 80%;
+  left: 30%;
+  animation: rotate 15s linear infinite reverse;
+}
+
+/* Layer 3 - Foreground elements */
+.layer-3 {
+  z-index: -1;
+}
+
+.layer-3 .element-6 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 50%;
+  top: 25%;
+  right: 25%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.layer-3 .element-7 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 107, 0, 0.08);
+  border-radius: 50%;
+  bottom: 40%;
+  right: 60%;
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Floating Particles */
+.parallax-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 50%;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.particle:nth-child(2n) {
+  background: rgba(255, 107, 0, 0.3);
+  animation-duration: 3s;
+}
+
+.particle:nth-child(3n) {
+  background: rgba(59, 130, 246, 0.3);
+  animation-duration: 5s;
+}
+
+.particle:nth-child(4n) {
+  width: 1px;
+  height: 1px;
+}
+
+.particle:nth-child(5n) {
+  width: 3px;
+  height: 3px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .layer-1 .element-1,
+  .layer-1 .element-2,
+  .layer-1 .element-3 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .layer-2 .element-4,
+  .layer-2 .element-5 {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .layer-3 .element-6,
+  .layer-3 .element-7 {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer,
+  .particle {
+    transform: none !important;
+  }
+  
+  .parallax-element,
+  .particle {
+    animation: none !important;
+  }
+}
