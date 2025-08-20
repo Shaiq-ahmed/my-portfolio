@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 
 const FloatingCube = ({ position, color = '#00ff88' }) => {
   const mesh = useRef();
