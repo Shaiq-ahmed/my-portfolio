@@ -2,7 +2,7 @@ export const s_list = [
     // Backend Frameworks & Technologies
     {
         name: 'NestJS',
-        icon: require('../../assests/nestjs-icon.png'), // You'll need to add this icon
+        icon: 'nestjs-fallback',
         category: 'backend',
         level: 'advanced'
     },
@@ -22,13 +22,13 @@ export const s_list = [
     // Databases
     {
         name: 'PostgreSQL',
-        icon: require('../../assests/postgresql-icon.png'), // You'll need to add this icon
+        icon: 'postgresql-fallback',
         category: 'database',
         level: 'advanced'
     },
     {
         name: 'Redis',
-        icon: require('../../assests/redis-icon.png'), // You'll need to add this icon
+        icon: 'redis-fallback',
         category: 'database',
         level: 'intermediate'
     },
@@ -48,7 +48,7 @@ export const s_list = [
     },
     {
         name: 'TypeScript',
-        icon: require('../../assests/typescript-icon.png'), // You'll need to add this icon
+        icon: 'typescript-fallback',
         category: 'language',
         level: 'advanced'
     },
@@ -74,7 +74,7 @@ export const s_list = [
     },
     {
         name: 'AWS',
-        icon: require('../../assests/aws-icon.png'), // You'll need to add this icon
+        icon: 'aws-fallback',
         category: 'cloud',
         level: 'intermediate'
     },
@@ -88,7 +88,7 @@ export const s_list = [
     // APIs & Architecture
     {
         name: 'GraphQL',
-        icon: require('../../assests/graphql-icon.png'), // You'll need to add this icon
+        icon: 'graphql-fallback',
         category: 'api',
         level: 'intermediate'
     },
@@ -100,7 +100,7 @@ export const s_list = [
     },
     {
         name: 'Microservices',
-        icon: require('../../assests/microservices-icon.png'), // You'll need to add this icon
+        icon: 'microservices-fallback',
         category: 'architecture',
         level: 'intermediate'
     },
