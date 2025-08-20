@@ -3,9 +3,11 @@ import "./skills.css";
 import { s_list, skillCategories, getSkillsByCategory } from "./s_list";
 import { motion, useInView, useAnimation } from "framer-motion";
 import InteractiveCodeCube from "../three/InteractiveCodeCube";
+import IconFallback from "./IconFallback";
 
 const SkillCard = ({ skill, index }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [imageError, setImageError] = useState(false);
   
   const getLevelColor = (level) => {
     switch(level) {
@@ -15,6 +17,8 @@ const SkillCard = ({ skill, index }) => {
       default: return '#64748b';
     }
   };
+
+  const isIconFallback = typeof skill.icon === 'string' && skill.icon.includes('-fallback');
 
   return (
     <motion.div
@@ -30,19 +34,18 @@ const SkillCard = ({ skill, index }) => {
       onHoverEnd={() => setIsHovered(false)}
     >
       <div className="skill-icon-container">
-        <img 
-          src={skill.icon} 
-          alt={skill.name} 
-          className="skill-icon"
-          onError={(e) => {
-            // Fallback to text if image fails to load
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'flex';
-          }}
-        />
-        <div className="skill-icon-fallback" style={{ display: 'none' }}>
-          {skill.name.substring(0, 2).toUpperCase()}
-        </div>
+        {isIconFallback || imageError ? (
+          <IconFallback name={skill.name} size={60} className="skill-icon" />
+        ) : (
+          <>
+            <img 
+              src={skill.icon} 
+              alt={skill.name} 
+              className="skill-icon"
+              onError={() => setImageError(true)}
+            />
+          </>
+        )}
       </div>
       <h4 className="skill-name">{skill.name}</h4>
       <div 
