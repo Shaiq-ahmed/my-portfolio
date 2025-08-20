@@ -8,6 +8,7 @@ import AboutMe from "./components/aboutMe/AboutMe.jsx";
 import Nav from "./components/nav/Nav.jsx";
 import Project from "./components/projects/Project.jsx";
 import FadeInSection from "./components/FadeInSection";
+import ParallaxBackground from "./components/effects/ParallaxBackground";
 
 function App() {
   return (
