@@ -44,7 +44,7 @@ const Intro = () => {
   return (
     <div className="intro-container">
       <div className="intro-3d-background">
-        <FloatingCodeParticles />
+        <SimpleBackground />
       </div>
       
       <motion.div
