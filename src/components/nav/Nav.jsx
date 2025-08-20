@@ -52,7 +52,7 @@ const Nav = () => {
               <FaCode className="logo-icon" />
               <span className="logo-text">
                 <span className="logo-name">Shaiq Ahmed</span>
-                <span className="logo-title">Backend Developer</span>
+                <span className="logo-title">Full Stack Developer</span>
               </span>
             </div>
           </a>
