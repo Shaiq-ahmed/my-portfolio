@@ -125,7 +125,7 @@ const Skills = () => {
         </motion.div>
 
         <div className="skills-3d-showcase">
-          <InteractiveCodeCube />
+          <SimpleCube />
         </div>
 
         <motion.div
