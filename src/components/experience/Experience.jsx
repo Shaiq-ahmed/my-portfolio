@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./experience.css";
 import branexLogo from "../../assests/Branex-Logo-1.png..webp";
-import appickLogo from "../../assests/logo.png";
+import IconFallback from "../skills/IconFallback";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const Experience = () => {
@@ -22,83 +22,163 @@ const Experience = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
+
+  const experiences = [
+    {
+      id: "digital-auxilius",
+      logo: null, // Will use fallback
+      company: "Digital Auxilius",
+      position: "Full Stack Developer",
+      date: "May 2025 - Present",
+      tasks: [
+        "Develop and maintain full-stack web applications using React, Node.js, Express, and MongoDB for various client projects.",
+        "Build responsive user interfaces with React and modern CSS frameworks, ensuring cross-browser compatibility and mobile responsiveness.",
+        "Design and implement RESTful APIs using Node.js and Express, handling authentication, data validation, and error management.",
+        "Work with MongoDB databases to design schemas, optimize queries, and implement data relationships for efficient data storage.",
+        "Integrate third-party APIs and services, including payment gateways, email services, and cloud storage solutions.",
+        "Collaborate with design teams to translate UI/UX designs into functional, interactive web applications.",
+        "Deploy applications using AWS services including EC2 and S3, ensuring scalable and secure cloud infrastructure."
+      ],
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "HTML/CSS", "AWS", "Git"]
+    },
+    {
+      id: "branex",
+      logo: branexLogo,
+      company: "Branex",
+      position: "Full Stack Developer",
+      date: "Oct 2022 - Apr 2025",
+      tasks: [
+        "Developed 7+ full-stack web applications using the MERN stack, delivering complete solutions from frontend UI to backend APIs.",
+        "Built dynamic and responsive user interfaces using React, implementing state management with Redux for complex applications.",
+        "Created robust backend APIs with Node.js and Express, handling user authentication, data processing, and business logic implementation.",
+        "Designed and optimized MongoDB database schemas, improving application performance and data retrieval efficiency.",
+        "Implemented real-time features using Socket.io for live chat systems and real-time notifications in web applications.",
+        "Wrote comprehensive tests using Jest to ensure code quality and application reliability across all project components.",
+        "Collaborated with cross-functional teams using Git version control, participating in code reviews and agile development processes."
+      ],
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Socket.io", "Jest", "Git"]
+    }
+  ];
 
   return (
-    <div className="container-experience " ref={ref} id="work">
+    <div className="container-experience" ref={ref} id="work">
       <div className="experience">
-        <div className="touch-button">
-          <p>Experience</p>
-        </div>
-        <p className="experience-main-text">
-          Here is my quick summary of my most recent experiences:{" "}
-        </p>
-        {/* <div className='container-work-experience'> */}
         <motion.div
-          key={""}
-          className="container-work-experience element"
-          variants={containerVariants}
-          initial="hidden"
+          className="experience-header"
+          initial={{ opacity: 0, y: -30 }}
           animate={mainControls}
-          whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
+          variants={{
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+          }}
         >
-          <div className="details-header">
-            <img className="company-logo" src={branexLogo} alt="branex" />
-            <p className="position">Associate Software Engineer</p>
-            <p className="date">Oct 2022 - Present </p>
+          <div className="touch-button">
+            <p>Professional Experience</p>
           </div>
-          <div className="task-details">
-            <ul>
-              <li>
-                Design and implement robust, scalable RESTful APIs using
-                Node.js, Express, and MongoDB, ensuring seamless integration
-                with front-end applications and third-party services.
-              </li>
-              <li>
-                Efficiently manage MongoDB databases, including schema design,
-                indexing, and query optimization to ensure high performance and
-                scalability.
-              </li>
-              <li>
-                Actively participate in code reviews, providing constructive
-                feedback to peers and ensuring adherence to best practices and
-                coding standards.
-              </li>
-              <li>
-                Write thorough unit and integration tests using Jest and
-                Supertest to ensure APIs are reliable and perform well,
-                achieving high test coverage.
-              </li>
-              <li>
-                Create detailed API documentation using tools like Swagger.
-              </li>
-            </ul>
-          </div>
+          <p className="experience-main-text">
+            My journey as a Full Stack Developer, building complete web applications with modern technologies
+          </p>
         </motion.div>
+        
+        <div className="experience-timeline">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              className={`experience-card ${exp.id === 'digital-auxilius' ? 'current-position' : ''}`}
+              variants={containerVariants}
+              initial="hidden"
+              animate={mainControls}
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              style={{ animationDelay: `${index * 0.3}s` }}
+            >
+              <div className="experience-content">
+                <div className="details-header">
+                  <div className="company-logo-container">
+                    {exp.logo ? (
+                      <img 
+                        className="company-logo" 
+                        src={exp.logo} 
+                        alt={exp.company.toLowerCase()} 
+                      />
+                    ) : (
+                      <IconFallback name={exp.company} size={80} className="company-logo-fallback" />
+                    )}
+                  </div>
+                  <div className="position-details">
+                    <h3 className="position">{exp.position}</h3>
+                    <h4 className="company-name">{exp.company}</h4>
+                    <p className="date">{exp.date}</p>
+                  </div>
+                  {exp.id === 'digital-auxilius' && (
+                    <div className="current-badge">
+                      Current Role
+                    </div>
+                  )}
+                </div>
+                
+                <div className="task-details">
+                  <ul>
+                    {exp.tasks.map((task, taskIndex) => (
+                      <motion.li 
+                        key={taskIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 * taskIndex }}
+                      >
+                        {task}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="technologies-used">
+                  <h5 className="tech-title">Technologies Used:</h5>
+                  <div className="tech-tags">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="experience-decorator">
+                <div className="decorator-line"></div>
+                <div className="decorator-dot"></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
         <motion.div
-          key={""}
-          className="container-work-experience"
-          variants={containerVariants}
-          initial="hidden"
+          className="experience-summary"
+          initial={{ opacity: 0, y: 50 }}
           animate={mainControls}
-          whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
+          variants={{
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.8 } }
+          }}
         >
-          <div className="details-header">
-            <img className="company-logo2" src={appickLogo} alt="appick" />
-            <p className="position">Web Developer - Intern</p>
-            <p className="date">March 2021 - May 2021 </p>
-          </div>
-          <div className="task-details">
-            <ul>
-              <li>
-                Build Frontend of their websites using HTML, CSS and Bootstrap.
-              </li>
-              <li>
-                Help develop and follow best practices and development
-                standards.
-              </li>
-              <li>Performs other related duties as assigned.</li>
-            </ul>
+          <div className="summary-content">
+            <h3 className="summary-title">Full Stack Expertise</h3>
+            <p className="summary-description">
+              Passionate about creating end-to-end web solutions that combine intuitive user experiences 
+              with robust backend architecture, delivering high-quality applications that meet business objectives.
+            </p>
+            <div className="summary-stats">
+              <div className="stat-item">
+                <span className="stat-number">2+</span>
+                <span className="stat-label">Years Experience</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">7+</span>
+                <span className="stat-label">Projects Completed</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">MERN</span>
+                <span className="stat-label">Stack Specialist</span>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
