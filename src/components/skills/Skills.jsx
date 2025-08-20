@@ -8,15 +8,6 @@ import IconFallback from "./IconFallback";
 const SkillCard = ({ skill, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
-  
-  const getLevelColor = (level) => {
-    switch(level) {
-      case 'expert': return '#00ff88';
-      case 'advanced': return '#ff6b00';
-      case 'intermediate': return '#3b82f6';
-      default: return '#64748b';
-    }
-  };
 
   const isIconFallback = typeof skill.icon === 'string' && skill.icon.includes('-fallback');
 
@@ -28,7 +19,7 @@ const SkillCard = ({ skill, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ 
         scale: 1.05, 
-        boxShadow: `0 10px 30px ${getLevelColor(skill.level)}40`
+        boxShadow: `0 10px 30px rgba(0, 255, 136, 0.4)`
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -48,12 +39,6 @@ const SkillCard = ({ skill, index }) => {
         )}
       </div>
       <h4 className="skill-name">{skill.name}</h4>
-      <div 
-        className="skill-level-indicator"
-        style={{ backgroundColor: getLevelColor(skill.level) }}
-      >
-        <span className="skill-level-text">{skill.level}</span>
-      </div>
       {isHovered && (
         <motion.div
           className="skill-category-tag"
@@ -93,13 +78,13 @@ const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   const categorizedSkills = getSkillsByCategory();
-  const priorityCategories = ['backend', 'database', 'frontend', 'language', 'devops', 'api'];
+  const priorityCategories = ['frontend', 'backend', 'database', 'cloud', 'api', 'tools'];
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   const filteredSkills = selectedCategory === 'all' 
     ? s_list 
@@ -117,10 +102,10 @@ const Skills = () => {
           }}
         >
           <div className="touch-button">
-            <p>Technical Expertise</p>
+            <p>Technical Skills</p>
           </div>
           <p className="skills-description">
-            Advanced technologies and frameworks I use to build scalable, high-performance applications
+            Technologies and tools I use to build modern web applications
           </p>
         </motion.div>
 
@@ -191,16 +176,16 @@ const Skills = () => {
         >
           <div className="summary-stats">
             <div className="stat-item">
-              <span className="stat-number">{s_list.filter(s => s.level === 'expert').length}</span>
-              <span className="stat-label">Expert Level</span>
+              <span className="stat-number">7+</span>
+              <span className="stat-label">Projects Built</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">{s_list.filter(s => s.level === 'advanced').length}</span>
-              <span className="stat-label">Advanced</span>
+              <span className="stat-number">2+</span>
+              <span className="stat-label">Years Experience</span>
             </div>
             <div className="stat-item">
               <span className="stat-number">{Object.keys(categorizedSkills).length}</span>
-              <span className="stat-label">Categories</span>
+              <span className="stat-label">Tech Categories</span>
             </div>
           </div>
         </motion.div>
