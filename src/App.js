@@ -13,6 +13,7 @@ import ParallaxBackground from "./components/effects/ParallaxBackground";
 function App() {
   return (
     <div className="App">
+      <ParallaxBackground />
       <Nav />
       <Intro />
       <FadeInSection>
