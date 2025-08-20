@@ -7,7 +7,7 @@ import { RxDotFilled } from "react-icons/rx";
 import profile from "../../assests/Subject.png";
 import { PiHandWavingDuotone } from "react-icons/pi";
 import { FaCode, FaDatabase, FaServer } from "react-icons/fa";
-import FloatingCodeParticles from "../three/FloatingCodeParticles";
+import SimpleBackground from "../three/SimpleBackground";
 
 const Intro = () => {
   const ref = useRef(null);
