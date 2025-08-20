@@ -36,9 +36,9 @@ const Intro = () => {
   }, [isInView, mainControls]);
 
   const techHighlights = [
-    { icon: FaServer, text: "Backend Architecture", color: "#00ff88" },
-    { icon: FaDatabase, text: "Database Design", color: "#ff6b00" },
-    { icon: FaCode, text: "API Development", color: "#3b82f6" }
+    { icon: FaCode, text: "Frontend Development", color: "#00ff88" },
+    { icon: FaServer, text: "Backend APIs", color: "#ff6b00" },
+    { icon: FaDatabase, text: "Database Design", color: "#3b82f6" }
   ];
 
   return (
@@ -66,7 +66,7 @@ const Intro = () => {
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 150 }}
           >
-            Senior Backend Developer
+            Full Stack Developer
           </motion.div>
           
           <h1 className="intro-name">
@@ -86,10 +86,10 @@ const Intro = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            Senior Software Engineer with <span className="highlight">3+ years</span> of experience in 
-            building <span className="highlight">scalable backend systems</span> and full-stack applications. 
-            Specialized in <span className="highlight">NestJS, PostgreSQL, and microservices architecture</span> 
-            for enterprise-level solutions.
+            Full Stack Developer with <span className="highlight">2+ years</span> of experience in 
+            building <span className="highlight">web applications</span> using the MERN stack. 
+            Specialized in <span className="highlight">React, Node.js, Express, and MongoDB</span> 
+            with expertise in both frontend and backend development.
           </motion.p>
 
           <motion.div 
