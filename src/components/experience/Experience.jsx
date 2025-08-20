@@ -22,40 +22,42 @@ const Experience = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   const experiences = [
     {
       id: "digital-auxilius",
       logo: null, // Will use fallback
       company: "Digital Auxilius",
-      position: "Backend Developer",
+      position: "Full Stack Developer",
       date: "May 2025 - Present",
       tasks: [
-        "Architect and develop scalable backend systems using NestJS, PostgreSQL, and Redis for high-performance applications serving 100K+ users.",
-        "Implement microservices architecture with Docker containerization, reducing deployment time by 60% and improving system reliability.",
-        "Design and optimize database schemas and queries in PostgreSQL, achieving 40% improvement in query performance through advanced indexing strategies.",
-        "Build real-time features using WebSockets and Redis pub/sub, enabling instant notifications and live data synchronization across distributed systems.",
-        "Lead API design and documentation using OpenAPI/Swagger, establishing consistent development standards across multiple development teams.",
-        "Implement comprehensive testing strategies including unit, integration, and e2e tests with 95% code coverage using Jest and Supertest."
+        "Develop and maintain full-stack web applications using React, Node.js, Express, and MongoDB for various client projects.",
+        "Build responsive user interfaces with React and modern CSS frameworks, ensuring cross-browser compatibility and mobile responsiveness.",
+        "Design and implement RESTful APIs using Node.js and Express, handling authentication, data validation, and error management.",
+        "Work with MongoDB databases to design schemas, optimize queries, and implement data relationships for efficient data storage.",
+        "Integrate third-party APIs and services, including payment gateways, email services, and cloud storage solutions.",
+        "Collaborate with design teams to translate UI/UX designs into functional, interactive web applications.",
+        "Deploy applications using AWS services including EC2 and S3, ensuring scalable and secure cloud infrastructure."
       ],
-      technologies: ["NestJS", "PostgreSQL", "Redis", "Docker", "TypeScript", "WebSockets", "Microservices"]
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "HTML/CSS", "AWS", "Git"]
     },
     {
       id: "branex",
       logo: branexLogo,
       company: "Branex",
-      position: "Associate Software Engineer",
+      position: "Full Stack Developer",
       date: "Oct 2022 - Apr 2025",
       tasks: [
-        "Developed and maintained 15+ production RESTful APIs using Node.js, Express, and MongoDB, serving over 50,000 daily active users with 99.9% uptime.",
-        "Optimized MongoDB database operations and implemented advanced aggregation pipelines, reducing average response time by 35% and improving overall system performance.",
-        "Collaborated with cross-functional teams in Agile environment, participating in daily standups, sprint planning, and retrospectives while mentoring 3 junior developers.",
-        "Established comprehensive testing framework with Jest and Supertest, achieving 90% test coverage and reducing production bugs by 70%.",
-        "Created detailed API documentation using Swagger/OpenAPI, improving developer onboarding time by 50% and enhancing team collaboration.",
-        "Implemented CI/CD pipelines using GitHub Actions, automating deployment processes and reducing manual deployment errors by 80%."
+        "Developed 7+ full-stack web applications using the MERN stack, delivering complete solutions from frontend UI to backend APIs.",
+        "Built dynamic and responsive user interfaces using React, implementing state management with Redux for complex applications.",
+        "Created robust backend APIs with Node.js and Express, handling user authentication, data processing, and business logic implementation.",
+        "Designed and optimized MongoDB database schemas, improving application performance and data retrieval efficiency.",
+        "Implemented real-time features using Socket.io for live chat systems and real-time notifications in web applications.",
+        "Wrote comprehensive tests using Jest to ensure code quality and application reliability across all project components.",
+        "Collaborated with cross-functional teams using Git version control, participating in code reviews and agile development processes."
       ],
-      technologies: ["Node.js", "Express", "MongoDB", "Jest", "GitHub Actions", "Swagger", "RESTful APIs"]
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Socket.io", "Jest", "Git"]
     }
   ];
 
@@ -74,71 +76,80 @@ const Experience = () => {
             <p>Professional Experience</p>
           </div>
           <p className="experience-main-text">
-            My professional journey as a Backend Developer, building scalable and robust systems for enterprise applications
+            My journey as a Full Stack Developer, building complete web applications with modern technologies
           </p>
         </motion.div>
         
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={exp.id}
-            className={`container-work-experience ${exp.id === 'digital-auxilius' ? 'current-position' : ''}`}
-            variants={containerVariants}
-            initial="hidden"
-            animate={mainControls}
-            whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
-            style={{ animationDelay: `${index * 0.3}s` }}
-          >
-            <div className="details-header">
-              <div className="company-logo-container">
-                {exp.logo ? (
-                  <img 
-                    className="company-logo" 
-                    src={exp.logo} 
-                    alt={exp.company.toLowerCase()} 
-                  />
-                ) : (
-                  <IconFallback name={exp.company} size={80} className="company-logo-fallback" />
-                )}
-              </div>
-              <div className="position-details">
-                <h3 className="position">{exp.position}</h3>
-                <h4 className="company-name">{exp.company}</h4>
-                <p className="date">{exp.date}</p>
-              </div>
-              {exp.id === 'digital-auxilius' && (
-                <div className="current-badge">
-                  Current Role
+        <div className="experience-timeline">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              className={`experience-card ${exp.id === 'digital-auxilius' ? 'current-position' : ''}`}
+              variants={containerVariants}
+              initial="hidden"
+              animate={mainControls}
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              style={{ animationDelay: `${index * 0.3}s` }}
+            >
+              <div className="experience-content">
+                <div className="details-header">
+                  <div className="company-logo-container">
+                    {exp.logo ? (
+                      <img 
+                        className="company-logo" 
+                        src={exp.logo} 
+                        alt={exp.company.toLowerCase()} 
+                      />
+                    ) : (
+                      <IconFallback name={exp.company} size={80} className="company-logo-fallback" />
+                    )}
+                  </div>
+                  <div className="position-details">
+                    <h3 className="position">{exp.position}</h3>
+                    <h4 className="company-name">{exp.company}</h4>
+                    <p className="date">{exp.date}</p>
+                  </div>
+                  {exp.id === 'digital-auxilius' && (
+                    <div className="current-badge">
+                      Current Role
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-            
-            <div className="task-details">
-              <ul>
-                {exp.tasks.map((task, taskIndex) => (
-                  <motion.li 
-                    key={taskIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * taskIndex }}
-                  >
-                    {task}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="technologies-used">
-              <h5 className="tech-title">Key Technologies:</h5>
-              <div className="tech-tags">
-                {exp.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="tech-tag">
-                    {tech}
-                  </span>
-                ))}
+                
+                <div className="task-details">
+                  <ul>
+                    {exp.tasks.map((task, taskIndex) => (
+                      <motion.li 
+                        key={taskIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 * taskIndex }}
+                      >
+                        {task}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="technologies-used">
+                  <h5 className="tech-title">Technologies Used:</h5>
+                  <div className="tech-tags">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+              
+              <div className="experience-decorator">
+                <div className="decorator-line"></div>
+                <div className="decorator-dot"></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
         
         <motion.div
           className="experience-summary"
@@ -148,22 +159,25 @@ const Experience = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.8 } }
           }}
         >
-          <div className="summary-stats">
-            <div className="stat-item">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">15+</span>
-              <span className="stat-label">APIs Developed</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">50K+</span>
-              <span className="stat-label">Daily Users Served</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">95%+</span>
-              <span className="stat-label">Test Coverage</span>
+          <div className="summary-content">
+            <h3 className="summary-title">Full Stack Expertise</h3>
+            <p className="summary-description">
+              Passionate about creating end-to-end web solutions that combine intuitive user experiences 
+              with robust backend architecture, delivering high-quality applications that meet business objectives.
+            </p>
+            <div className="summary-stats">
+              <div className="stat-item">
+                <span className="stat-number">2+</span>
+                <span className="stat-label">Years Experience</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">7+</span>
+                <span className="stat-label">Projects Completed</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">MERN</span>
+                <span className="stat-label">Stack Specialist</span>
+              </div>
             </div>
           </div>
         </motion.div>
