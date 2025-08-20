@@ -47,7 +47,7 @@ const Nav = () => {
     <nav className={`nav-container ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
         <div className="left-nav">
-          <a href="#" className="logo-link" onClick={closeMenu}>
+          <a href="#top" className="logo-link" onClick={closeMenu}>
             <div className="logo-container">
               <FaCode className="logo-icon" />
               <span className="logo-text">
