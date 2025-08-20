@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./experience.css";
 import branexLogo from "../../assests/Branex-Logo-1.png..webp";
-import digitalAuxiliusLogo from "../../assests/digital-auxilius-logo.png"; // You'll need to add this
+import IconFallback from "../skills/IconFallback";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const Experience = () => {
@@ -27,7 +27,7 @@ const Experience = () => {
   const experiences = [
     {
       id: "digital-auxilius",
-      logo: digitalAuxiliusLogo,
+      logo: null, // Will use fallback
       company: "Digital Auxilius",
       position: "Backend Developer",
       date: "May 2025 - Present",
@@ -38,7 +38,8 @@ const Experience = () => {
         "Build real-time features using WebSockets and Redis pub/sub, enabling instant notifications and live data synchronization across distributed systems.",
         "Lead API design and documentation using OpenAPI/Swagger, establishing consistent development standards across multiple development teams.",
         "Implement comprehensive testing strategies including unit, integration, and e2e tests with 95% code coverage using Jest and Supertest."
-      ]
+      ],
+      technologies: ["NestJS", "PostgreSQL", "Redis", "Docker", "TypeScript", "WebSockets", "Microservices"]
     },
     {
       id: "branex",
@@ -53,51 +54,119 @@ const Experience = () => {
         "Established comprehensive testing framework with Jest and Supertest, achieving 90% test coverage and reducing production bugs by 70%.",
         "Created detailed API documentation using Swagger/OpenAPI, improving developer onboarding time by 50% and enhancing team collaboration.",
         "Implemented CI/CD pipelines using GitHub Actions, automating deployment processes and reducing manual deployment errors by 80%."
-      ]
+      ],
+      technologies: ["Node.js", "Express", "MongoDB", "Jest", "GitHub Actions", "Swagger", "RESTful APIs"]
     }
   ];
 
   return (
     <div className="container-experience" ref={ref} id="work">
       <div className="experience">
-        <div className="touch-button">
-          <p>Professional Experience</p>
-        </div>
-        <p className="experience-main-text">
-          My professional journey as a Backend Developer, building scalable and robust systems:
-        </p>
+        <motion.div
+          className="experience-header"
+          initial={{ opacity: 0, y: -30 }}
+          animate={mainControls}
+          variants={{
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+          }}
+        >
+          <div className="touch-button">
+            <p>Professional Experience</p>
+          </div>
+          <p className="experience-main-text">
+            My professional journey as a Backend Developer, building scalable and robust systems for enterprise applications
+          </p>
+        </motion.div>
         
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.id}
-            className="container-work-experience element"
+            className={`container-work-experience ${exp.id === 'digital-auxilius' ? 'current-position' : ''}`}
             variants={containerVariants}
             initial="hidden"
             animate={mainControls}
             whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
-            style={{ animationDelay: `${index * 0.2}s` }}
+            style={{ animationDelay: `${index * 0.3}s` }}
           >
             <div className="details-header">
-              <img 
-                className={exp.id === "digital-auxilius" ? "company-logo" : "company-logo"} 
-                src={exp.logo} 
-                alt={exp.company.toLowerCase()} 
-              />
+              <div className="company-logo-container">
+                {exp.logo ? (
+                  <img 
+                    className="company-logo" 
+                    src={exp.logo} 
+                    alt={exp.company.toLowerCase()} 
+                  />
+                ) : (
+                  <IconFallback name={exp.company} size={80} className="company-logo-fallback" />
+                )}
+              </div>
               <div className="position-details">
                 <h3 className="position">{exp.position}</h3>
                 <h4 className="company-name">{exp.company}</h4>
                 <p className="date">{exp.date}</p>
               </div>
+              {exp.id === 'digital-auxilius' && (
+                <div className="current-badge">
+                  Current Role
+                </div>
+              )}
             </div>
+            
             <div className="task-details">
               <ul>
                 {exp.tasks.map((task, taskIndex) => (
-                  <li key={taskIndex}>{task}</li>
+                  <motion.li 
+                    key={taskIndex}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * taskIndex }}
+                  >
+                    {task}
+                  </motion.li>
                 ))}
               </ul>
             </div>
+            
+            <div className="technologies-used">
+              <h5 className="tech-title">Key Technologies:</h5>
+              <div className="tech-tags">
+                {exp.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="tech-tag">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           </motion.div>
         ))}
+        
+        <motion.div
+          className="experience-summary"
+          initial={{ opacity: 0, y: 50 }}
+          animate={mainControls}
+          variants={{
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.8 } }
+          }}
+        >
+          <div className="summary-stats">
+            <div className="stat-item">
+              <span className="stat-number">3+</span>
+              <span className="stat-label">Years Experience</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">15+</span>
+              <span className="stat-label">APIs Developed</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">50K+</span>
+              <span className="stat-label">Daily Users Served</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">95%+</span>
+              <span className="stat-label">Test Coverage</span>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
