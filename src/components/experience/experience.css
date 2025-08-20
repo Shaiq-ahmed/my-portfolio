@@ -185,14 +185,129 @@
 }
 
 /* Current Position Highlight */
-.container-work-experience:first-of-type {
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(255, 107, 0, 0.05));
-  border: 1px solid rgba(0, 255, 136, 0.2);
+.container-work-experience.current-position {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.08), rgba(255, 107, 0, 0.05));
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  position: relative;
 }
 
-.container-work-experience:first-of-type::before {
+.container-work-experience.current-position::before {
   background: linear-gradient(90deg, #00ff88, #ff6b00);
   transform: translateX(0);
+}
+
+.current-badge {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #000000;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Company Logo Container */
+.company-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo-fallback {
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Technologies Used */
+.technologies-used {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 255, 136, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Experience Summary */
+.experience-summary {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.summary-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-stats .stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #00ff88, #ff6b00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.summary-stats .stat-label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Skills Tags (if you want to add them) */
