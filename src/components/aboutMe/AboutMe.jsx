@@ -13,7 +13,7 @@ const AboutMe = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -28,23 +28,23 @@ const AboutMe = () => {
   const principles = [
     {
       icon: FaCode,
-      title: "Clean Architecture",
-      description: "Writing maintainable, scalable code with SOLID principles"
+      title: "Clean Code",
+      description: "Writing maintainable and readable code following best practices"
     },
     {
       icon: FaRocket,
-      title: "Performance First",
-      description: "Optimizing systems for speed and reliability"
+      title: "Modern Tech",
+      description: "Using latest technologies to build efficient applications"
     },
     {
       icon: FaUsers,
-      title: "Team Collaboration",
-      description: "Leading and mentoring teams for project success"
+      title: "Collaboration",
+      description: "Working effectively with teams to deliver quality solutions"
     },
     {
       icon: FaBrain,
-      title: "Continuous Learning",
-      description: "Staying updated with latest technologies and best practices"
+      title: "Problem Solving",
+      description: "Finding creative solutions to complex development challenges"
     }
   ];
 
@@ -68,7 +68,7 @@ const AboutMe = () => {
           <div className="touch-button">
             <p>About Me</p>
           </div>
-          <h2 className="about-title">Building the Future, One API at a Time</h2>
+          <h2 className="about-title">Passionate Full Stack Developer</h2>
         </motion.div>
 
         <motion.div
@@ -87,24 +87,24 @@ const AboutMe = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <p className="intro-paragraph">
-                  I'm a <span className="highlight">Senior Backend Developer</span> with 3+ years of experience 
-                  specializing in building <span className="highlight">scalable enterprise systems</span>. 
-                  My expertise lies in designing robust APIs, optimizing database performance, and implementing 
-                  microservices architectures that serve millions of users.
+                  I'm a <span className="highlight">Full Stack Developer</span> with 2+ years of experience 
+                  specializing in <span className="highlight">MERN stack development</span>. 
+                  I love creating complete web solutions that combine beautiful user interfaces 
+                  with robust backend systems.
                 </p>
                 
                 <p className="description-paragraph">
                   I graduated with a <strong>Bachelor of Engineering in Computer Systems</strong> from 
-                  <strong> NED University</strong> in 2022, and since then, I've been dedicated to mastering 
-                  backend technologies. My journey has evolved from working with traditional Node.js/Express 
-                  stacks to implementing modern solutions with NestJS, PostgreSQL, and distributed systems.
+                  <strong> NED University</strong> in 2022. Since then, I've been dedicated to mastering 
+                  both frontend and backend technologies, working with React for dynamic user interfaces 
+                  and Node.js/Express for scalable server-side applications.
                 </p>
 
                 <p className="description-paragraph">
-                  Currently at Digital Auxilius, I lead backend development initiatives, mentor junior developers, 
-                  and architect solutions that handle high-traffic loads while maintaining 99.9% uptime. 
-                  My approach combines technical excellence with business impact, ensuring every solution 
-                  drives measurable results.
+                  Currently, I'm focused on building modern web applications using MongoDB for data storage, 
+                  implementing RESTful APIs, and deploying applications on cloud platforms like AWS. 
+                  I enjoy the entire development process from designing user experiences to optimizing 
+                  database performance.
                 </p>
               </motion.div>
 
@@ -146,7 +146,7 @@ const AboutMe = () => {
                   ease: "easeInOut"
                 }}
               />
-              <img className="about-image" src={image} alt="Shaiq Ahmed - Backend Developer" />
+              <img className="about-image" src={image} alt="Shaiq Ahmed - Full Stack Developer" />
             </div>
             
             <motion.div
@@ -156,16 +156,16 @@ const AboutMe = () => {
               transition={{ duration: 0.6, delay: 1.6 }}
             >
               <div className="achievement-item">
-                <span className="achievement-number">15+</span>
-                <span className="achievement-label">APIs Built</span>
+                <span className="achievement-number">7+</span>
+                <span className="achievement-label">Projects Built</span>
               </div>
               <div className="achievement-item">
-                <span className="achievement-number">3+</span>
+                <span className="achievement-number">2+</span>
                 <span className="achievement-label">Years Experience</span>
               </div>
               <div className="achievement-item">
-                <span className="achievement-number">50K+</span>
-                <span className="achievement-label">Users Served</span>
+                <span className="achievement-number">MERN</span>
+                <span className="achievement-label">Stack Focus</span>
               </div>
             </motion.div>
           </motion.div>
