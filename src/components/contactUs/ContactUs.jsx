@@ -5,6 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 import { RxCopy } from "react-icons/rx";
 import { FiMail, FiMapPin, FiSend } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import TouchButton from '../shared/TouchButton';
 
 const ContactUs = () => {
   const ref = useRef(null);
