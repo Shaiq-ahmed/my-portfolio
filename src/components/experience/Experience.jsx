@@ -215,8 +215,8 @@ const Experience = () => {
                 <span className="stat-label">Projects Completed</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">MERN</span>
-                <span className="stat-label">Stack Specialist</span>
+                <span className="stat-number">Full</span>
+                <span className="stat-label">Stack Expert</span>
               </div>
             </div>
           </div>
