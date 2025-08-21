@@ -66,7 +66,7 @@ export const s_list = [
     },
     {
         name: 'PostgreSQL',
-        icon: 'postgresql-fallback',
+        icon: require('../../assests/icons8-postgresql-96.png'),
         category: 'database'
     },
     {
@@ -83,7 +83,7 @@ export const s_list = [
     // Cloud & DevOps
     {
         name: 'AWS',
-        icon: 'aws-fallback',
+        icon: require('../../assests/icons8-aws-96.png'),
         category: 'cloud'
     },
     {
@@ -133,6 +133,28 @@ export const s_list = [
         name: 'Swagger',
         icon: require('../../assests/Swagger.png'),
         category: 'tools'
+    },
+    {
+        name: 'Jira',
+        icon: require('../../assests/icons8-jira-96.png'),
+        category: 'tools'
+    },
+
+    // Payment & Communication
+    {
+        name: 'Stripe',
+        icon: require('../../assests/icons8-stripe-24.png'),
+        category: 'payment'
+    },
+    {
+        name: 'PayPal',
+        icon: require('../../assests/icons8-paypal-24.png'),
+        category: 'payment'
+    },
+    {
+        name: 'Twilio',
+        icon: require('../../assests/icons8-twilio-24.png'),
+        category: 'communication'
     }
 ];
 
@@ -145,7 +167,9 @@ export const skillCategories = {
     cloud: 'Cloud Services',
     api: 'API & Real-time',
     testing: 'Testing',
-    tools: 'Development Tools'
+    tools: 'Development Tools',
+    payment: 'Payment Systems',
+    communication: 'Communication APIs'
 };
 
 export const getSkillsByCategory = () => {
