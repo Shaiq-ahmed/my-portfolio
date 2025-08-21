@@ -171,49 +171,93 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .touch-button {
+    white-space: nowrap;
+    min-width: fit-content;
+  }
+
   .touch-button.medium {
-    padding: 10px 24px;
+    padding: 10px 20px;
     font-size: 0.85rem;
   }
-  
+
   .touch-button.large {
-    padding: 14px 32px;
-    font-size: 0.95rem;
+    padding: 12px 28px;
+    font-size: 0.9rem;
   }
-  
+
   .button-content {
     gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .button-text {
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 480px) {
   .touch-button {
     min-width: auto;
+    white-space: nowrap;
+    display: inline-flex;
+    flex-shrink: 0;
   }
-  
+
   .touch-button.small {
-    padding: 6px 16px;
-    font-size: 0.75rem;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.3px;
   }
-  
+
   .touch-button.medium {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+
+  .touch-button.large {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+
+  .button-content {
+    gap: 5px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .button-text {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    flex-shrink: 0;
+  }
+
+  .button-icon {
+    flex-shrink: 0;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  .touch-button.small {
+    padding: 5px 12px;
+    font-size: 0.65rem;
+  }
+
+  .touch-button.medium {
+    padding: 6px 16px;
+    font-size: 0.7rem;
+  }
+
+  .touch-button.large {
     padding: 8px 20px;
     font-size: 0.8rem;
   }
-  
-  .touch-button.large {
-    padding: 12px 28px;
-    font-size: 0.9rem;
-  }
-  
+
   .button-content {
-    gap: 6px;
-  }
-  
-  .button-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    gap: 4px;
   }
 }
 
