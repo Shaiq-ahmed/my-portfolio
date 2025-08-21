@@ -88,7 +88,7 @@ const Intro = () => {
           >
             Full Stack Developer passionate about creating <span className="highlight">innovative web applications</span>
             using modern technologies. Specialized in <span className="highlight">React, Node.js, Express, and MongoDB </span>
-            with expertise in both frontend and backend development.
+             with expertise in both frontend and backend development.
           </motion.p>
 
           <motion.div 
