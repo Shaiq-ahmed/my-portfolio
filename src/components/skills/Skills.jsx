@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./skills.css";
 import { s_list, skillCategories, getSkillsByCategory } from "./s_list";
 import { motion, useInView, useAnimation } from "framer-motion";
-import CodingLaptopScene from "../three/CodingLaptopScene";
+import SimpleCube from "../three/SimpleCube";
 import IconFallback from "./IconFallback";
 import SectionHeading from "../shared/SectionHeading";
 
