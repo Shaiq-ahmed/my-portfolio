@@ -102,7 +102,7 @@ const Skills = () => {
         />
 
         <div className="skills-3d-showcase">
-          <CodingLaptopScene />
+          <SimpleCube />
         </div>
 
         <motion.div
