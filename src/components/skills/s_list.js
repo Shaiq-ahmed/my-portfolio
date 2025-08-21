@@ -82,12 +82,7 @@ export const s_list = [
 
     // Cloud & DevOps
     {
-        name: 'AWS S3',
-        icon: 'aws-fallback',
-        category: 'cloud'
-    },
-    {
-        name: 'AWS EC2',
+        name: 'AWS',
         icon: 'aws-fallback',
         category: 'cloud'
     },
@@ -96,16 +91,11 @@ export const s_list = [
         icon: require('../../assests/icons8-docker-96.png'),
         category: 'devops'
     },
-    
-    // APIs & Tools
+
+    // APIs & Real-time
     {
         name: 'RESTful APIs',
         icon: require('../../assests/icons8-rest-api-50.png'),
-        category: 'api'
-    },
-    {
-        name: 'GraphQL',
-        icon: 'graphql-fallback',
         category: 'api'
     },
     {
