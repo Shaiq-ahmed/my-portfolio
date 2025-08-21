@@ -36,7 +36,7 @@ const Experience = () => {
       type: "Full-time",
       location: "Remote",
       highlights: [
-        "Full-stack web development with MERN stack",
+        "Full-stack web development with modern technologies",
         "Responsive UI/UX implementation",
         "RESTful API design and development",
         "Cloud deployment with AWS services"
