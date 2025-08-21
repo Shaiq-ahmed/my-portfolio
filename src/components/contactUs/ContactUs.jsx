@@ -5,6 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 import { RxCopy } from "react-icons/rx";
 import { FiMail, FiMapPin, FiSend } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import TouchButton from '../shared/TouchButton';
 
 const ContactUs = () => {
   const ref = useRef(null);
@@ -17,10 +18,6 @@ const ContactUs = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const slideIn = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
 
   useEffect(() => {
     if (isInView) {
@@ -90,10 +87,9 @@ const ContactUs = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
           }}
         >
-          <div className='touch-button'>
-            <FiSend className="button-icon" />
-            <p>Get in Touch</p>
-          </div>
+          <TouchButton icon={FiSend} variant="primary" size="medium">
+            Get in Touch
+          </TouchButton>
           <h2 className="contact-title">Let's Work Together</h2>
           <p className='contact-main-text'>
             I'm always interested in new opportunities and exciting projects. 

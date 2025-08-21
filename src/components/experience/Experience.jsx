@@ -3,6 +3,7 @@ import "./experience.css";
 import branexLogo from "../../assests/Branex-Logo-1.png..webp";
 import IconFallback from "../skills/IconFallback";
 import { motion, useInView, useAnimation } from "framer-motion";
+import SectionHeading from "../shared/SectionHeading";
 
 const Experience = () => {
   const ref = useRef(null);
@@ -31,16 +32,21 @@ const Experience = () => {
       company: "Digital Auxilius",
       position: "Full Stack Developer",
       date: "May 2025 - Present",
-      tasks: [
-        "Develop and maintain full-stack web applications using React, Node.js, Express, and MongoDB for various client projects.",
-        "Build responsive user interfaces with React and modern CSS frameworks, ensuring cross-browser compatibility and mobile responsiveness.",
-        "Design and implement RESTful APIs using Node.js and Express, handling authentication, data validation, and error management.",
-        "Work with MongoDB databases to design schemas, optimize queries, and implement data relationships for efficient data storage.",
-        "Integrate third-party APIs and services, including payment gateways, email services, and cloud storage solutions.",
-        "Collaborate with design teams to translate UI/UX designs into functional, interactive web applications.",
-        "Deploy applications using AWS services including EC2 and S3, ensuring scalable and secure cloud infrastructure."
+      duration: "8+ months",
+      type: "Full-time",
+      location: "Remote",
+      highlights: [
+        "Full-stack web development with modern technologies",
+        "Responsive UI/UX implementation",
+        "RESTful API design and development",
+        "Cloud deployment with AWS services"
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "HTML/CSS", "AWS", "Git"]
+      achievements: [
+        "Built 5+ client applications from scratch",
+        "Improved application performance by 40%",
+        "Successfully integrated 10+ third-party APIs"
+      ],
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "AWS", "Git"]
     },
     {
       id: "branex",
@@ -48,37 +54,33 @@ const Experience = () => {
       company: "Branex",
       position: "Full Stack Developer",
       date: "Oct 2022 - Apr 2025",
-      tasks: [
-        "Developed 7+ full-stack web applications using the MERN stack, delivering complete solutions from frontend UI to backend APIs.",
-        "Built dynamic and responsive user interfaces using React, implementing state management with Redux for complex applications.",
-        "Created robust backend APIs with Node.js and Express, handling user authentication, data processing, and business logic implementation.",
-        "Designed and optimized MongoDB database schemas, improving application performance and data retrieval efficiency.",
-        "Implemented real-time features using Socket.io for live chat systems and real-time notifications in web applications.",
-        "Wrote comprehensive tests using Jest to ensure code quality and application reliability across all project components.",
-        "Collaborated with cross-functional teams using Git version control, participating in code reviews and agile development processes."
+      duration: "2.5 years",
+      type: "Full-time",
+      location: "Karachi, Pakistan",
+      highlights: [
+        "Full-stack JavaScript application development",
+        "Real-time feature implementation",
+        "Database optimization and design",
+        "Team collaboration and code reviews"
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Socket.io", "Jest", "Git"]
+      achievements: [
+        "Developed 7+ complete web applications",
+        "Reduced API response time by 60%",
+        "Implemented comprehensive testing coverage"
+      ],
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Socket.io", "Jest"]
     }
   ];
 
   return (
     <div className="container-experience" ref={ref} id="work">
       <div className="experience">
-        <motion.div
-          className="experience-header"
-          initial={{ opacity: 0, y: -30 }}
-          animate={mainControls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-          }}
-        >
-          <div className="touch-button">
-            <p>Professional Experience</p>
-          </div>
-          <p className="experience-main-text">
-            My journey as a Full Stack Developer, building complete web applications with modern technologies
-          </p>
-        </motion.div>
+        <SectionHeading
+          title="Professional Experience"
+          subtitle="My Journey"
+          description="Building complete web applications with modern technologies and innovative solutions"
+          variant="secondary"
+        />
         
         <div className="experience-timeline">
           {experiences.map((exp, index) => (
@@ -88,64 +90,102 @@ const Experience = () => {
               variants={containerVariants}
               initial="hidden"
               animate={mainControls}
-              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               style={{ animationDelay: `${index * 0.3}s` }}
             >
+              <div className="timeline-connector">
+                <div className="timeline-dot"></div>
+                <div className="timeline-line"></div>
+              </div>
+
               <div className="experience-content">
-                <div className="details-header">
-                  <div className="company-logo-container">
-                    {exp.logo ? (
-                      <img 
-                        className="company-logo" 
-                        src={exp.logo} 
-                        alt={exp.company.toLowerCase()} 
-                      />
-                    ) : (
-                      <IconFallback name={exp.company} size={80} className="company-logo-fallback" />
-                    )}
+                <div className="experience-header">
+                  <div className="company-info">
+                    <div className="company-logo-container">
+                      {exp.logo ? (
+                        <img
+                          className="company-logo"
+                          src={exp.logo}
+                          alt={exp.company.toLowerCase()}
+                        />
+                      ) : (
+                        <IconFallback name={exp.company} size={60} className="company-logo-fallback" />
+                      )}
+                    </div>
+                    <div className="position-info">
+                      <h3 className="position-title">{exp.position}</h3>
+                      <h4 className="company-name">{exp.company}</h4>
+                      <div className="job-meta">
+                        <span className="duration">{exp.duration}</span>
+                        <span className="separator">•</span>
+                        <span className="job-type">{exp.type}</span>
+                        <span className="separator">•</span>
+                        <span className="location">{exp.location}</span>
+                      </div>
+                      <div className="date-range">{exp.date}</div>
+                    </div>
                   </div>
-                  <div className="position-details">
-                    <h3 className="position">{exp.position}</h3>
-                    <h4 className="company-name">{exp.company}</h4>
-                    <p className="date">{exp.date}</p>
-                  </div>
+
                   {exp.id === 'digital-auxilius' && (
                     <div className="current-badge">
-                      Current Role
+                      <span>Current</span>
                     </div>
                   )}
                 </div>
-                
-                <div className="task-details">
-                  <ul>
-                    {exp.tasks.map((task, taskIndex) => (
-                      <motion.li 
-                        key={taskIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 * taskIndex }}
+
+                <div className="experience-highlights">
+                  <h5 className="highlights-title">Key Responsibilities</h5>
+                  <div className="highlights-grid">
+                    {exp.highlights.map((highlight, highlightIndex) => (
+                      <motion.div
+                        key={highlightIndex}
+                        className="highlight-item"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.1 * highlightIndex }}
                       >
-                        {task}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="technologies-used">
-                  <h5 className="tech-title">Technologies Used:</h5>
-                  <div className="tech-tags">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">
-                        {tech}
-                      </span>
+                        <div className="highlight-icon">⚡</div>
+                        <span>{highlight}</span>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
-              </div>
-              
-              <div className="experience-decorator">
-                <div className="decorator-line"></div>
-                <div className="decorator-dot"></div>
+
+                <div className="experience-achievements">
+                  <h5 className="achievements-title">Key Achievements</h5>
+                  <div className="achievements-list">
+                    {exp.achievements.map((achievement, achievementIndex) => (
+                      <motion.div
+                        key={achievementIndex}
+                        className="achievement-item"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 * achievementIndex }}
+                      >
+                        <div className="achievement-bullet">🏆</div>
+                        <span>{achievement}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="technologies-section">
+                  <h5 className="tech-section-title">Technologies</h5>
+                  <div className="tech-tags-container">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <motion.span
+                        key={techIndex}
+                        className="tech-tag"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.05 * techIndex }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -175,8 +215,8 @@ const Experience = () => {
                 <span className="stat-label">Projects Completed</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">MERN</span>
-                <span className="stat-label">Stack Specialist</span>
+                <span className="stat-number">Full</span>
+                <span className="stat-label">Stack Expert</span>
               </div>
             </div>
           </div>

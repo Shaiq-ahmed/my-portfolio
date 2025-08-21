@@ -1,0 +1,316 @@
+.touch-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  user-select: none;
+  box-shadow: 0 15px 35px rgba(0, 255, 136, 0.25);
+}
+
+/* Button Content */
+.button-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.button-text {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1;
+}
+
+.button-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.touch-button:hover .button-icon {
+  transform: scale(1.1);
+}
+
+/* Button Variants */
+.touch-button.primary {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #000000;
+  box-shadow: 0 15px 35px rgba(0, 255, 136, 0.3);
+}
+
+.touch-button.primary:hover {
+  background: linear-gradient(135deg, #00cc6a, #00aa55);
+  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.4);
+}
+
+.touch-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1);
+}
+
+.touch-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+}
+
+.touch-button.accent {
+  background: linear-gradient(135deg, #ff6b00, #ff4500);
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(255, 107, 0, 0.3);
+}
+
+.touch-button.accent:hover {
+  background: linear-gradient(135deg, #ff4500, #ff3000);
+  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.4);
+}
+
+/* Button Sizes */
+.touch-button.small {
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.touch-button.small .button-content {
+  gap: 6px;
+}
+
+.touch-button.small .button-icon {
+  font-size: 0.9rem;
+}
+
+.touch-button.medium {
+  padding: 12px 28px;
+  font-size: 0.9rem;
+}
+
+.touch-button.medium .button-icon {
+  font-size: 1rem;
+}
+
+.touch-button.large {
+  padding: 16px 36px;
+  font-size: 1rem;
+}
+
+.touch-button.large .button-content {
+  gap: 12px;
+}
+
+.touch-button.large .button-icon {
+  font-size: 1.2rem;
+}
+
+/* Button Effects */
+.button-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.touch-button:hover .button-glow {
+  opacity: 1;
+}
+
+.button-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.touch-button:hover .button-shine {
+  left: 100%;
+}
+
+/* States */
+.touch-button:active {
+  transform: translateY(1px);
+}
+
+.touch-button:focus {
+  outline: 2px solid rgba(0, 255, 136, 0.5);
+  outline-offset: 3px;
+}
+
+.touch-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.touch-button:disabled:hover {
+  transform: none !important;
+  box-shadow: 0 15px 35px rgba(0, 255, 136, 0.15) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .touch-button {
+    white-space: nowrap;
+    min-width: fit-content;
+  }
+
+  .touch-button.medium {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .touch-button.large {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+
+  .button-content {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .button-text {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .touch-button {
+    min-width: auto;
+    white-space: nowrap;
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .touch-button.small {
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.3px;
+  }
+
+  .touch-button.medium {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+
+  .touch-button.large {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+
+  .button-content {
+    gap: 5px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .button-text {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    flex-shrink: 0;
+  }
+
+  .button-icon {
+    flex-shrink: 0;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  .touch-button.small {
+    padding: 5px 12px;
+    font-size: 0.65rem;
+  }
+
+  .touch-button.medium {
+    padding: 6px 16px;
+    font-size: 0.7rem;
+  }
+
+  .touch-button.large {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .button-content {
+    gap: 4px;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .touch-button.primary {
+    background: #00ff88;
+    color: #000000;
+    border: 2px solid #000000;
+  }
+  
+  .touch-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+  
+  .touch-button.accent {
+    background: #ff6b00;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .touch-button {
+    transition: none;
+  }
+  
+  .button-icon {
+    transition: none;
+  }
+  
+  .button-glow {
+    transition: none;
+  }
+  
+  .button-shine {
+    transition: none;
+  }
+  
+  .touch-button:hover .button-shine {
+    left: -100%;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .touch-button {
+    background: transparent !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,230 @@
+.section-heading {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-heading.centered {
+  text-align: center;
+}
+
+.heading-container {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-badge {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(255, 107, 0, 0.15));
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50px;
+  padding: 12px 30px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 136, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.heading-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.heading-badge:hover::before {
+  left: 100%;
+}
+
+.badge-text {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.badge-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.heading-badge:hover .badge-glow {
+  opacity: 1;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  letter-spacing: -0.02em;
+}
+
+.section-heading.primary .section-title {
+  background: linear-gradient(135deg, #00ff88 0%, #ffffff 50%, #ff6b00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-heading.secondary .section-title {
+  background: linear-gradient(135deg, #ff6b00 0%, #ffffff 50%, #00ff88 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 20px 0 0 0;
+  max-width: 600px;
+  font-weight: 400;
+}
+
+.section-heading.centered .section-description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading-divider {
+  height: 3px;
+  background: linear-gradient(90deg, #00ff88, #ff6b00);
+  border-radius: 2px;
+  margin: 30px auto 0;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.section-heading.centered .heading-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffffff 0%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-heading {
+    margin-bottom: 40px;
+  }
+  
+  .heading-badge {
+    padding: 10px 25px;
+    margin-bottom: 15px;
+  }
+  
+  .badge-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+  
+  .heading-divider {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-badge {
+    padding: 8px 20px;
+  }
+  
+  .badge-text {
+    font-size: 0.8rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for text reveal */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  animation: textReveal 0.8s ease-out;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .heading-badge {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+  }
+  
+  .badge-text {
+    color: #ffffff;
+    text-shadow: none;
+  }
+  
+  .section-title {
+    background: #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .heading-badge::before {
+    transition: none;
+  }
+  
+  .section-title {
+    animation: none;
+  }
+  
+  .badge-glow {
+    transition: none;
+  }
+}

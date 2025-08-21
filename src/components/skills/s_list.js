@@ -82,36 +82,26 @@ export const s_list = [
 
     // Cloud & DevOps
     {
-        name: 'AWS S3',
-        icon: 'aws-fallback',
-        category: 'cloud'
-    },
-    {
-        name: 'AWS EC2',
+        name: 'AWS',
         icon: 'aws-fallback',
         category: 'cloud'
     },
     {
         name: 'Docker',
         icon: require('../../assests/icons8-docker-96.png'),
-        category: 'devops'
+        category: 'tools'
     },
-    
-    // APIs & Tools
+
+    // APIs & Real-time
     {
         name: 'RESTful APIs',
         icon: require('../../assests/icons8-rest-api-50.png'),
         category: 'api'
     },
     {
-        name: 'GraphQL',
-        icon: 'graphql-fallback',
-        category: 'api'
-    },
-    {
         name: 'Socket.io',
         icon: require('../../assests/Socket.io.png'),
-        category: 'realtime'
+        category: 'api'
     },
 
     // Testing & Quality
@@ -149,15 +139,13 @@ export const s_list = [
 // Organize skills by category for better display
 export const skillCategories = {
     frontend: 'Frontend Development',
-    backend: 'Backend Development', 
+    backend: 'Backend Development',
     database: 'Database Management',
     language: 'Programming Languages',
-    devops: 'DevOps & Deployment',
     cloud: 'Cloud Services',
-    api: 'API Development',
+    api: 'API & Real-time',
     testing: 'Testing',
-    tools: 'Development Tools',
-    realtime: 'Real-time Technologies'
+    tools: 'Development Tools'
 };
 
 export const getSkillsByCategory = () => {
