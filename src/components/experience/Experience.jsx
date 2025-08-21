@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./experience.css";
-import branexLogo from "../../assests/Branex-Logo-1.png..webp";
+import nanosoftLogo from "../../assests/nanosoft-logo.png";
+import digitalAuxiliusLogo from "../../assests/Digital-auxilius.jpeg";
 import IconFallback from "../skills/IconFallback";
 import { motion, useInView, useAnimation } from "framer-motion";
 import SectionHeading from "../shared/SectionHeading";
@@ -28,31 +29,30 @@ const Experience = () => {
   const experiences = [
     {
       id: "digital-auxilius",
-      logo: null, // Will use fallback
+      logo: digitalAuxiliusLogo, // Will use fallback
       company: "Digital Auxilius",
-      position: "Full Stack Developer",
+      position: "Backend Developer",
       date: "May 2025 - Present",
-      duration: "8+ months",
+      duration: "3+ months",
       type: "Full-time",
-      location: "Remote",
+      location: "OnSite, Karachi, Pakistan",
       highlights: [
-        "Full-stack web development with modern technologies",
-        "Responsive UI/UX implementation",
-        "RESTful API design and development",
-        "Cloud deployment with AWS services"
+        "Developing scalable backend systems",
+        "Implementing RESTful APIs",
+        "Optimizing database queries",
+        "Collaborating with frontend teams",
       ],
       achievements: [
-        "Built 5+ client applications from scratch",
         "Improved application performance by 40%",
-        "Successfully integrated 10+ third-party APIs"
+        "Successfully integrated 6+ third-party APIs"
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "AWS", "Git"]
+      technologies: ["Node.js", "Nest.js", "Express","PostgreSQL",  "MongoDB", "JavaScript", "TypeScript", "Redis", "Docker", "Git"]
     },
     {
-      id: "branex",
-      logo: branexLogo,
-      company: "Branex",
-      position: "Full Stack Developer",
+      id: "Nanosoft Technologies",
+      logo: nanosoftLogo,
+      company: "Nanosoft Technologies",
+      position: "Associate Software Engineer",
       date: "Oct 2022 - Apr 2025",
       duration: "2.5 years",
       type: "Full-time",
@@ -61,10 +61,12 @@ const Experience = () => {
         "Full-stack JavaScript application development",
         "Real-time feature implementation",
         "Database optimization and design",
-        "Team collaboration and code reviews"
+        "API development and integration",
+        "Writing unit and integration tests",
+        "Collaboration with cross-functional teams",
       ],
       achievements: [
-        "Developed 7+ complete web applications",
+        "Developed 5+ complete web applications",
         "Reduced API response time by 60%",
         "Implemented comprehensive testing coverage"
       ],

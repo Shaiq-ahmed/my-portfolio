@@ -86,9 +86,9 @@ const Intro = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            Full Stack Developer passionate about creating <span className="highlight">innovative web applications</span>
+            Full Stack Developer with <span className="highlight">2+ years of experience</span> passionate about creating <span className="highlight">innovative web applications </span>
             using modern technologies. Specialized in <span className="highlight">React, Node.js, Express, and MongoDB </span>
-             with expertise in both frontend and backend development.
+            with expertise in both frontend and backend development.
           </motion.p>
 
           <motion.div 
