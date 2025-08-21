@@ -18,10 +18,6 @@ const ContactUs = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const slideIn = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
 
   useEffect(() => {
     if (isInView) {
