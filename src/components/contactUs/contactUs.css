@@ -91,11 +91,37 @@
   gap: 60px;
 }
 
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
 /* Contact Methods */
 .contact-methods {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.section-subtitle {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-subtitle::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #00ff88, #ff6b00);
+  border-radius: 2px;
 }
 
 .contact-method {
@@ -231,6 +257,96 @@
   z-index: 10;
 }
 
+/* Contact Sidebar */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.availability-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(15px);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.status-text {
+  color: #00ff88;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.response-time,
+.skills-highlight {
+  margin-bottom: 20px;
+}
+
+.response-time h4,
+.skills-highlight h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.response-time p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00ff88;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(0, 255, 136, 0.2);
+  border-color: rgba(0, 255, 136, 0.5);
+}
+
 /* Social Section */
 .social-section {
   text-align: center;
@@ -239,6 +355,17 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(15px);
+}
+
+.social-header {
+  margin-bottom: 30px;
+}
+
+.social-title {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .social-text {
@@ -255,10 +382,9 @@
 
 .social-link {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 20px;
+  gap: 15px;
+  padding: 20px 25px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 15px;
@@ -266,7 +392,20 @@
   color: #94a3b8;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  min-width: 120px;
+  min-width: 180px;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.social-handle {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .social-link:hover {
@@ -367,57 +506,72 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .availability-card {
+    order: -1;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-container {
     padding: 80px 0;
   }
-  
+
   .contact-us {
     padding: 0 20px;
   }
-  
+
   .contact-title {
     font-size: 2rem;
   }
-  
+
   .contact-main-text {
     font-size: 1.1rem;
   }
-  
+
   .contact-method {
     padding: 25px 20px;
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
-  
+
   .method-actions {
     justify-content: center;
   }
-  
+
   .social-links {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
+
   .social-link {
-    flex-direction: row;
-    min-width: 200px;
+    min-width: 220px;
     justify-content: flex-start;
     padding: 15px 20px;
   }
-  
+
   .contact-cta {
     padding: 40px 25px;
   }
-  
+
   .cta-title {
     font-size: 1.5rem;
   }
-  
+
   .cta-description {
     font-size: 1rem;
+  }
+
+  .skill-tags {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
