@@ -89,7 +89,7 @@ export const s_list = [
     {
         name: 'Docker',
         icon: require('../../assests/icons8-docker-96.png'),
-        category: 'devops'
+        category: 'tools'
     },
 
     // APIs & Real-time
