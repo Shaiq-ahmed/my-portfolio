@@ -79,7 +79,7 @@ const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   const categorizedSkills = getSkillsByCategory();
-  const priorityCategories = ['frontend', 'backend', 'database', 'cloud', 'api', 'tools'];
+  const priorityCategories = ['frontend', 'backend', 'database', 'cloud', 'api', 'tools', 'payment', 'communication'];
 
   useEffect(() => {
     if (isInView) {
