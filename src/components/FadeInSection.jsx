@@ -9,12 +9,17 @@ function FadeInSection({ children }) {
       entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
 
-    if (domRef.current) {
-      observer.observe(domRef.current);
+    const currentElement = domRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
-    return () => observer.unobserve(domRef.current);
-  }, [domRef]);
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, []);
 
   return (
     <div
