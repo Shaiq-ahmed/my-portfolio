@@ -152,23 +152,39 @@
 }
 
 .company-logo-container {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 12px;
-  background: white;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.company-logo,
+.company-logo {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 6px;
+  max-width: none;
+  max-height: none;
+}
+
 .company-logo-fallback {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00ff88, #ff6b00);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .position-info {
@@ -453,39 +469,46 @@
   .container-experience {
     padding: 60px 0;
   }
-  
+
   .experience {
     padding: 0 15px;
   }
-  
+
   .experience-timeline::before {
     left: 20px;
   }
-  
+
   .experience-card {
     gap: 20px;
   }
-  
+
   .timeline-connector {
     width: 40px;
   }
-  
+
   .experience-content {
     padding: 20px;
   }
-  
+
   .experience-header {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .company-info {
     gap: 15px;
+    align-items: center;
   }
-  
+
   .company-logo-container {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .company-logo {
+    width: 85%;
+    height: 85%;
   }
   
   .position-title {
@@ -519,26 +542,41 @@
   .experience-content {
     padding: 15px;
   }
-  
+
   .position-title {
     font-size: 1.1rem;
   }
-  
+
   .company-name {
     font-size: 1rem;
   }
-  
+
   .highlights-grid {
     gap: 8px;
   }
-  
+
   .highlight-item {
     padding: 10px 12px;
   }
-  
+
   .summary-stats {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .company-info {
+    text-align: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .company-logo-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .position-info {
+    text-align: center;
   }
 }
 

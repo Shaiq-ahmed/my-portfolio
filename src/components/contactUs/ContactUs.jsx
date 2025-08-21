@@ -102,8 +102,10 @@ const ContactUs = () => {
           variants={fadeIn}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="contact-methods">
-            {contactMethods.map((method, index) => (
+          <div className="contact-grid">
+            <div className="contact-methods">
+              <h3 className="section-subtitle">Get in Touch</h3>
+              {contactMethods.map((method, index) => (
               <motion.div
                 key={index}
                 className="contact-method"
@@ -149,6 +151,28 @@ const ContactUs = () => {
                 )}
               </motion.div>
             ))}
+            </div>
+
+            <div className="contact-sidebar">
+              <div className="availability-card">
+                <div className="status-indicator">
+                  <div className="status-dot"></div>
+                  <span className="status-text">Available for new projects</span>
+                </div>
+                <div className="response-time">
+                  <h4>Quick Response</h4>
+                  <p>I typically respond within 24 hours</p>
+                </div>
+                <div className="skills-highlight">
+                  <h4>Specializing In</h4>
+                  <div className="skill-tags">
+                    <span className="skill-tag">MERN Stack</span>
+                    <span className="skill-tag">API Development</span>
+                    <span className="skill-tag">Database Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <motion.div
@@ -157,9 +181,12 @@ const ContactUs = () => {
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 1.2 }}
           >
-            <p className='social-text'>
-              Find me on these platforms
-            </p>
+            <div className="social-header">
+              <h3 className="social-title">Connect With Me</h3>
+              <p className='social-text'>
+                Let's build something amazing together
+              </p>
+            </div>
             <div className='social-links'>
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -168,12 +195,15 @@ const ContactUs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
-                  whileHover={{ scale: 1.1, y: -3 }}
+                  whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   style={{ '--hover-color': social.color }}
                 >
                   <social.icon className="social-icon" />
-                  <span className="social-label">{social.label}</span>
+                  <div className="social-info">
+                    <span className="social-label">{social.label}</span>
+                    <span className="social-handle">@{social.label.toLowerCase()}</span>
+                  </div>
                 </motion.a>
               ))}
             </div>
