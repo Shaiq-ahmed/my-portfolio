@@ -88,7 +88,7 @@ const Intro = () => {
           >
             Full Stack Developer with <span className="highlight">2+ years</span> of experience in 
             building <span className="highlight">web applications</span> using the MERN stack. 
-            Specialized in <span className="highlight">React, Node.js, Express, and MongoDB</span> 
+            Specialized in <span className="highlight">React, Node.js, Express, and MongoDB </span> 
             with expertise in both frontend and backend development.
           </motion.p>
 
