@@ -237,6 +237,11 @@
     gap: 60px;
     text-align: center;
   }
+
+  /* Change order so image appears first on mobile */
+  .right-sec {
+    order: -1;
+  }
   
   .about-title {
     font-size: 2.2rem;
@@ -257,43 +262,48 @@
   .container-about {
     padding: 60px 0;
   }
-  
+
   .about {
     padding: 0 20px;
   }
-  
+
   .about-title {
     font-size: 2rem;
   }
-  
+
   .intro-paragraph {
     font-size: 1.2rem;
   }
-  
+
   .description-paragraph {
     font-size: 1rem;
   }
-  
+
   .principles-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .principle-card {
     padding: 20px 15px;
   }
-  
+
   .image-container {
     width: 200px;
     height: 200px;
   }
-  
+
   .achievements {
     padding: 25px;
   }
-  
+
   .achievement-number {
     font-size: 1.8rem;
+  }
+
+  /* Ensure image is on top on mobile */
+  .right-sec {
+    order: -1;
   }
 }
 
