@@ -5,6 +5,7 @@ import image from "../../assests/Invoice-generator-tracker.png";
 import chat from "../../assests/chat.gif";
 import admin from "../../assests/admiin.jpg";
 import { LuExternalLink } from "react-icons/lu";
+import SectionHeading from "../shared/SectionHeading";
 
 const Project = () => {
   const ref = useRef(null);
@@ -94,12 +95,12 @@ const Project = () => {
         variants={fadeIn}
         transition={{ duration: 0.8, ease: "easeInOut" }} // Slower fade-in with easing
       >
-        <div className="touch-button">
-          <p>Work</p>
-        </div>
-        <p className="work-main-text">
-          Some of the noteworthy projects I have built:
-        </p>
+        <SectionHeading
+          title="Featured Work"
+          subtitle="Recent Projects"
+          description="Showcasing innovative web applications and mobile solutions I've built"
+          variant="primary"
+        />
         {projects.map((project, index) => (
           <motion.div
             className="project-card"
