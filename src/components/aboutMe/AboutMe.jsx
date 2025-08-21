@@ -165,8 +165,8 @@ const AboutMe = () => {
                 <span className="achievement-label">Commits</span>
               </div>
               <div className="achievement-item">
-                <span className="achievement-number">MERN</span>
-                <span className="achievement-label">Stack Focus</span>
+                <span className="achievement-number">JS</span>
+                <span className="achievement-label">Expert</span>
               </div>
             </motion.div>
           </motion.div>
