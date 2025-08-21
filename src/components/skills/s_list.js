@@ -101,7 +101,7 @@ export const s_list = [
     {
         name: 'Socket.io',
         icon: require('../../assests/Socket.io.png'),
-        category: 'realtime'
+        category: 'api'
     },
 
     // Testing & Quality
