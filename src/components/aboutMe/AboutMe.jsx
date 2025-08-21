@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import "./aboutme.css";
 import image from "../../assests/img3.png";
-import { FaCode, FaRocket, FaUsers, FaBrain } from "react-icons/fa";
+import { FaCode, FaRocket, FaUsers, FaBrain, FaUser } from "react-icons/fa";
+import TouchButton from '../shared/TouchButton';
 
 const AboutMe = () => {
   const ref = useRef(null);
@@ -65,9 +66,9 @@ const AboutMe = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
           }}
         >
-          <div className="touch-button">
-            <p>About Me</p>
-          </div>
+          <TouchButton icon={FaUser} variant="primary" size="medium">
+            About Me
+          </TouchButton>
           <h2 className="about-title">Passionate Full Stack Developer</h2>
         </motion.div>
 
@@ -87,9 +88,9 @@ const AboutMe = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <p className="intro-paragraph">
-                  I'm a <span className="highlight">Full Stack Developer</span> with 2+ years of experience 
-                  specializing in <span className="highlight">MERN stack development</span>. 
-                  I love creating complete web solutions that combine beautiful user interfaces 
+                  I'm a <span className="highlight">Full Stack Developer</span> with expertise
+                  specializing in <span className="highlight">MERN stack development</span>.
+                  I love creating complete web solutions that combine beautiful user interfaces
                   with robust backend systems.
                 </p>
                 
@@ -160,8 +161,8 @@ const AboutMe = () => {
                 <span className="achievement-label">Projects Built</span>
               </div>
               <div className="achievement-item">
-                <span className="achievement-number">2+</span>
-                <span className="achievement-label">Years Experience</span>
+                <span className="achievement-number">50+</span>
+                <span className="achievement-label">Commits</span>
               </div>
               <div className="achievement-item">
                 <span className="achievement-number">MERN</span>
