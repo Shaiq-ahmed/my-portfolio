@@ -27,8 +27,6 @@ const FloatingCode = ({ position, char, delay = 0 }) => {
       color="#00ff88"
       anchorX="center"
       anchorY="middle"
-      material-transparent
-      material-opacity={opacity}
     >
       {char}
     </Text>
