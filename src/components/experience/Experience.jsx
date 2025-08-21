@@ -3,6 +3,7 @@ import "./experience.css";
 import branexLogo from "../../assests/Branex-Logo-1.png..webp";
 import IconFallback from "../skills/IconFallback";
 import { motion, useInView, useAnimation } from "framer-motion";
+import SectionHeading from "../shared/SectionHeading";
 
 const Experience = () => {
   const ref = useRef(null);
@@ -64,21 +65,12 @@ const Experience = () => {
   return (
     <div className="container-experience" ref={ref} id="work">
       <div className="experience">
-        <motion.div
-          className="experience-header"
-          initial={{ opacity: 0, y: -30 }}
-          animate={mainControls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-          }}
-        >
-          <div className="touch-button">
-            <p>Professional Experience</p>
-          </div>
-          <p className="experience-main-text">
-            My journey as a Full Stack Developer, building complete web applications with modern technologies
-          </p>
-        </motion.div>
+        <SectionHeading
+          title="Professional Experience"
+          subtitle="My Journey"
+          description="Building complete web applications with modern technologies and innovative solutions"
+          variant="secondary"
+        />
         
         <div className="experience-timeline">
           {experiences.map((exp, index) => (
