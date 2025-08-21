@@ -139,15 +139,13 @@ export const s_list = [
 // Organize skills by category for better display
 export const skillCategories = {
     frontend: 'Frontend Development',
-    backend: 'Backend Development', 
+    backend: 'Backend Development',
     database: 'Database Management',
     language: 'Programming Languages',
-    devops: 'DevOps & Deployment',
     cloud: 'Cloud Services',
-    api: 'API Development',
+    api: 'API & Real-time',
     testing: 'Testing',
-    tools: 'Development Tools',
-    realtime: 'Real-time Technologies'
+    tools: 'Development Tools'
 };
 
 export const getSkillsByCategory = () => {
