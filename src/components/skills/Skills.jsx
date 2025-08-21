@@ -4,6 +4,7 @@ import { s_list, skillCategories, getSkillsByCategory } from "./s_list";
 import { motion, useInView, useAnimation } from "framer-motion";
 import CodingLaptopScene from "../three/CodingLaptopScene";
 import IconFallback from "./IconFallback";
+import SectionHeading from "../shared/SectionHeading";
 
 const SkillCard = ({ skill, index }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -93,21 +94,12 @@ const Skills = () => {
   return (
     <div className="container-skills" ref={ref} id="skills">
       <div className="skills-section">
-        <motion.div
-          className="skills-header"
-          initial={{ opacity: 0, y: -50 }}
-          animate={mainControls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-          }}
-        >
-          <div className="touch-button">
-            <p>Technical Skills</p>
-          </div>
-          <p className="skills-description">
-            Technologies and tools I use to build modern web applications
-          </p>
-        </motion.div>
+        <SectionHeading
+          title="Technical Skills"
+          subtitle="My Tech Stack"
+          description="Technologies and tools I use to build modern web applications"
+          variant="primary"
+        />
 
         <div className="skills-3d-showcase">
           <CodingLaptopScene />
