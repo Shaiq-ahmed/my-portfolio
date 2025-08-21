@@ -32,57 +32,84 @@ const Project = () => {
   const projects = [
     {
       id: 1,
-      title: "Invoice Generator",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error facere sint maiores quas, adipisci officia ut quidem velit voluptatibus. Esse quod quam provident rem laborum, commodi rerum minus ad quidem!",
+      title: "E-Commerce Platform",
+      subtitle: "Full-Stack Shopping Solution",
+      description: "A comprehensive e-commerce platform with real-time inventory management, secure payment processing, and intuitive admin dashboard. Features include product catalog, shopping cart, user authentication, and order tracking.",
       image: image,
-      tools: [
-        "MongoDB",
-        "Express",
-        "NodeJS",
-        "JavaScript",
-        "React",
-        "Redux",
-        "Docker",
-        "NGINX",
-        "Git",
+      category: "Web Application",
+      status: "Live",
+      duration: "3 months",
+      teamSize: "4 developers",
+      myRole: "Full-Stack Developer",
+      features: [
+        "Real-time inventory management",
+        "Secure payment integration",
+        "Admin dashboard with analytics",
+        "Mobile-responsive design",
+        "Order tracking system"
       ],
+      challenges: [
+        "Implemented real-time stock updates across multiple users",
+        "Optimized database queries for fast product searches",
+        "Integrated multiple payment gateways"
+      ],
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Socket.io", "Stripe API"],
+      github: "#",
+      demo: "#"
     },
     {
       id: 2,
-      title: "Project Two",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error facere sint maiores quas, adipisci officia ut quidem velit voluptatibus. Esse quod quam provident rem laborum, commodi rerum minus ad quidem!",
+      title: "Task Management App",
+      subtitle: "Team Collaboration Platform",
+      description: "A modern task management application designed for team collaboration with real-time updates, drag-and-drop functionality, and comprehensive project tracking. Includes time tracking, file sharing, and team communication features.",
       image: admin,
-      tools: [
-        "MongoDB",
-        "Express",
-        "NodeJS",
-        "JavaScript",
-        "React",
-        "Redux",
-        "Docker",
-        "NGINX",
-        "Git",
+      category: "Mobile & Web App",
+      status: "Live",
+      duration: "4 months",
+      teamSize: "3 developers",
+      myRole: "Lead Developer",
+      features: [
+        "Drag-and-drop task boards",
+        "Real-time team collaboration",
+        "Time tracking and reporting",
+        "File attachment system",
+        "Push notifications"
       ],
+      challenges: [
+        "Implemented complex drag-and-drop functionality",
+        "Built real-time collaboration features",
+        "Optimized performance for large datasets"
+      ],
+      technologies: ["React Native", "React", "Node.js", "PostgreSQL", "Socket.io", "AWS S3"],
+      github: "#",
+      demo: "#"
     },
     {
       id: 3,
-      title: "Project Three",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error facere sint maiores quas, adipisci officia ut quidem velit voluptatibus. Esse quod quam provident rem laborum, commodi rerum minus ad quidem!",
+      title: "Real-Time Chat Application",
+      subtitle: "Enterprise Communication Hub",
+      description: "A scalable real-time messaging platform built for enterprise use with end-to-end encryption, file sharing, video calls, and advanced moderation tools. Supports thousands of concurrent users with high performance.",
       image: chat,
-      tools: [
-        "MongoDB",
-        "Express",
-        "NodeJS",
-        "JavaScript",
-        "React",
-        "Redux",
-        "Docker",
-        "NGINX",
-        "Git",
+      category: "Web Application",
+      status: "Live",
+      duration: "2 months",
+      teamSize: "2 developers",
+      myRole: "Full-Stack Developer",
+      features: [
+        "End-to-end encryption",
+        "Video and voice calls",
+        "File sharing capabilities",
+        "Message search and history",
+        "Multi-room support"
       ],
+      challenges: [
+        "Implemented secure end-to-end encryption",
+        "Optimized for thousands of concurrent users",
+        "Built scalable WebSocket architecture"
+      ],
+      technologies: ["React", "Node.js", "Socket.io", "Redis", "MongoDB", "WebRTC"],
+      github: "#",
+      demo: "#"
     },
   ];
 
