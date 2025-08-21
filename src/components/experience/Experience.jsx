@@ -58,7 +58,7 @@ const Experience = () => {
       type: "Full-time",
       location: "Karachi, Pakistan",
       highlights: [
-        "MERN stack application development",
+        "Full-stack JavaScript application development",
         "Real-time feature implementation",
         "Database optimization and design",
         "Team collaboration and code reviews"
