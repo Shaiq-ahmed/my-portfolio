@@ -87,7 +87,7 @@ const Intro = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             Full Stack Developer passionate about creating <span className="highlight">innovative web applications</span>
-            using modern technologies. Specialized in <span className="highlight">React, Node.js, Express, and MongoDB</span>
+            using modern technologies. Specialized in <span className="highlight">React, Node.js, Express, and MongoDB </span>
             with expertise in both frontend and backend development.
           </motion.p>
 
