@@ -91,10 +91,9 @@ const ContactUs = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
           }}
         >
-          <div className='touch-button'>
-            <FiSend className="button-icon" />
-            <p>Get in Touch</p>
-          </div>
+          <TouchButton icon={FiSend} variant="primary" size="medium">
+            Get in Touch
+          </TouchButton>
           <h2 className="contact-title">Let's Work Together</h2>
           <p className='contact-main-text'>
             I'm always interested in new opportunities and exciting projects. 
