@@ -332,24 +332,29 @@
 /* Project Actions */
 .project-actions {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
 }
 
 .action-btn {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
+  gap: 6px;
+  padding: 12px 16px;
   border-radius: 12px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .demo-btn {
@@ -386,41 +391,47 @@
   .container-project {
     padding: 60px 0;
   }
-  
+
   .work {
     padding: 0 15px;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 25px;
     margin-top: 40px;
   }
-  
+
   .project-content {
     padding: 20px;
   }
-  
+
   .project-header {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .project-meta {
     text-align: left;
   }
-  
+
   .project-title {
     font-size: 1.2rem;
   }
-  
+
   .project-description {
     font-size: 0.9rem;
   }
-  
+
+  .project-actions {
+    gap: 10px;
+  }
+
   .action-btn {
-    padding: 10px 16px;
-    font-size: 0.85rem;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    gap: 4px;
+    min-width: 110px;
   }
 }
 
@@ -428,24 +439,32 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .project-image-container {
     height: 200px;
   }
-  
+
   .project-content {
     padding: 15px;
   }
-  
+
   .project-title {
     font-size: 1.1rem;
   }
-  
+
   .project-actions {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-  
+
+  .action-btn {
+    flex: none;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    min-width: auto;
+  }
+
   .overlay-content {
     flex-direction: column;
     gap: 10px;
