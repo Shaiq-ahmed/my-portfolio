@@ -70,7 +70,7 @@ const Nav = () => {
             {menu && <hr className="divider" />}
             <li className="nav-cta">
               <a
-                href="/Shaiq's-Resume.pdf"
+                href="/Shaiq Ahmed - Resume .pdf"
                 className={`download-cv ${menu ? "show" : ""}`}
                 download
                 onClick={closeMenu}
