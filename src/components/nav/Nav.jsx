@@ -7,6 +7,7 @@ import { FaCode } from "react-icons/fa";
 const Nav = () => {
   const [menu, setMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState('');
 
   const toggleMenu = () => {
     setMenu(!menu);
