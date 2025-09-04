@@ -81,6 +81,7 @@
   color: #2b303a;
   line-height: 1.7;
   margin: 0;
+  max-width: 68ch;
 }
 
 .highlight {
