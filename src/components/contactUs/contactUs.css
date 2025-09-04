@@ -14,9 +14,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 20%, rgba(10, 131, 237, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(253, 73, 73, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 80% 80%, rgba(43, 48, 58, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -120,7 +120,7 @@
   content: '';
   width: 4px;
   height: 20px;
-  background: linear-gradient(180deg, #0a83ed, #fd4949);
+  background: linear-gradient(180deg, #0a83ed, #2b303a);
   border-radius: 2px;
 }
 
@@ -164,7 +164,7 @@
 .method-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(10, 131, 237, 0.2), rgba(253, 73, 73, 0.2));
+  background: linear-gradient(135deg, rgba(10, 131, 237, 0.2), rgba(43, 48, 58, 0.2));
   border: 1px solid rgba(10, 131, 237, 0.3);
   border-radius: 15px;
   display: flex;
@@ -438,7 +438,7 @@
 .contact-cta {
   text-align: center;
   padding: 50px;
-  background: linear-gradient(135deg, rgba(10, 131, 237, 0.05), rgba(253, 73, 73, 0.05));
+  background: linear-gradient(135deg, rgba(10, 131, 237, 0.05), rgba(43, 48, 58, 0.05));
   border: 1px solid rgba(43, 48, 58, 0.12);
   border-radius: 25px;
   backdrop-filter: blur(15px);
@@ -453,7 +453,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(from 0deg, rgba(10, 131, 237, 0.1), rgba(253, 73, 73, 0.1), rgba(10, 131, 237, 0.1));
+  background: conic-gradient(from 0deg, rgba(10, 131, 237, 0.1), rgba(43, 48, 58, 0.1), rgba(10, 131, 237, 0.1));
   animation: rotate 15s linear infinite;
   z-index: -1;
 }
