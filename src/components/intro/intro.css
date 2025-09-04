@@ -119,6 +119,7 @@
 
 .tech-icon {
   font-size: 1.2rem;
+  color: #0a83ed;
 }
 
 /* Intro Details */
@@ -346,3 +347,6 @@
 .intro-image-container {
   animation: float 3s ease-in-out infinite;
 }
+
+/* Utility */
+.inline-element { display: inline-block; }
