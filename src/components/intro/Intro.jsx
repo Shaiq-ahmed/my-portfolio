@@ -74,7 +74,7 @@ const Intro = () => {
             <motion.div
               animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
               transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
-              style={{ display: "inline-block" }}
+              className="inline-element"
             >
               <PiHandWavingDuotone className="intro-wave" />
             </motion.div>
@@ -104,7 +104,7 @@ const Intro = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <tech.icon className="tech-icon" style={{ color: tech.color }} />
+                <tech.icon className="tech-icon" />
                 <span>{tech.text}</span>
               </motion.div>
             ))}
