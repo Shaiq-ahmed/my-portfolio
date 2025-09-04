@@ -50,7 +50,7 @@
   padding: 8px;
   background: rgba(10, 131, 237, 0.1);
   border-radius: 10px;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: 1px solid rgba(10, 131, 237, 0.2);
 }
 
 .logo-text {
@@ -165,7 +165,7 @@
 
 .menu-toggle:hover {
   background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(0, 255, 136, 0.5);
+  border-color: rgba(10, 131, 237, 0.5);
 }
 
 /* Mobile Styles */

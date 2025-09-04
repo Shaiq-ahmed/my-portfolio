@@ -63,7 +63,7 @@
 .touch-button.secondary:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(10, 131, 237, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 20px 40px rgba(10, 131, 237, 0.2);
 }
 
 .touch-button.accent {

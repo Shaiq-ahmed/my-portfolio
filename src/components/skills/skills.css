@@ -263,7 +263,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #00ff88, #ff6b00);
+  background: linear-gradient(135deg, #2b303a, #0a83ed);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -290,7 +290,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 10px 30px rgba(10, 131, 237, 0.3);
 }
 
 /* Responsive Design */

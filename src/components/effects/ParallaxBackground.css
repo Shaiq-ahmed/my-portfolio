@@ -130,7 +130,7 @@
 }
 
 .particle:nth-child(2n) {
-  background: rgba(255, 107, 0, 0.3);
+  background: rgba(253, 73, 73, 0.3);
   animation-duration: 3s;
 }
 
