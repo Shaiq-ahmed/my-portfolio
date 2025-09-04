@@ -281,6 +281,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  max-width: 68ch;
 }
 
 .project-role {
@@ -290,6 +291,7 @@
   padding: 10px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 68ch;
 }
 
 .project-role strong {
