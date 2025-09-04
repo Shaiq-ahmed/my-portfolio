@@ -1,7 +1,7 @@
 /* Contact Section */
 .contact-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+  background: linear-gradient(135deg, #f9f9f9 0%, #f2f3f3 50%, #e5e6e7 100%);
   padding: 100px 0;
   position: relative;
   overflow: hidden;
