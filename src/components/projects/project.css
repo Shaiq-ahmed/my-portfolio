@@ -379,7 +379,7 @@
 
 .tech-badge:hover {
   background: rgba(10, 131, 237, 0.2);
-  border-color: rgba(0, 255, 136, 0.5);
+  border-color: rgba(10, 131, 237, 0.5);
   transform: translateY(-1px);
 }
 
