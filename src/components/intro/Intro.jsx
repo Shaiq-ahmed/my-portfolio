@@ -190,9 +190,9 @@ const Intro = () => {
             >
               <defs>
                 <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#00ff88" />
-                  <stop offset="50%" stopColor="#ff6b00" />
-                  <stop offset="100%" stopColor="#3b82f6" />
+                  <stop offset="0%" stopColor="#0a83ed" />
+                  <stop offset="50%" stopColor="#fd4949" />
+                  <stop offset="100%" stopColor="#2b303a" />
                 </linearGradient>
                 <clipPath id="clip-path">
                   <path
