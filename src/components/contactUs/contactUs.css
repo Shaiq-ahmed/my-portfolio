@@ -107,7 +107,7 @@
 }
 
 .section-subtitle {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 25px;
@@ -126,7 +126,7 @@
 
 .contact-method {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(43, 48, 58, 0.12);
   border-radius: 20px;
   padding: 30px;
   display: flex;
@@ -190,17 +190,17 @@
 }
 
 .method-label {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .method-value {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .method-actions {
@@ -266,7 +266,7 @@
 
 .availability-card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(43, 48, 58, 0.12);
   border-radius: 20px;
   padding: 25px;
   backdrop-filter: blur(15px);
@@ -312,9 +312,9 @@
 
 .response-time h4,
 .skills-highlight h4 {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
@@ -352,7 +352,7 @@
   text-align: center;
   padding: 40px;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(43, 48, 58, 0.12);
   border-radius: 20px;
   backdrop-filter: blur(15px);
 }
@@ -362,9 +362,9 @@
 }
 
 .social-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -409,10 +409,15 @@
 }
 
 .social-link:hover {
-  color: var(--hover-color);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--hover-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #2b303a;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(43, 48, 58, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+.social-link:hover .social-icon,
+.social-link:hover .social-label,
+.social-link:hover .social-handle {
+  color: #2b303a;
 }
 
 .social-icon {
@@ -434,7 +439,7 @@
   text-align: center;
   padding: 50px;
   background: linear-gradient(135deg, rgba(10, 131, 237, 0.05), rgba(253, 73, 73, 0.05));
-  border: 1px solid rgba(10, 131, 237, 0.1);
+  border: 1px solid rgba(43, 48, 58, 0.12);
   border-radius: 25px;
   backdrop-filter: blur(15px);
   position: relative;

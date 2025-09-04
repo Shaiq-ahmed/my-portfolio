@@ -119,7 +119,7 @@
   object-fit: cover;
   transition: transform 0.4s ease;
   border-radius: 0;
-  z-index: 1;
+  z-index: 0;
   background: #181830;
   display: block;
 }
@@ -141,6 +141,8 @@
   padding: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
+  color: #ffffff;
 }
 
 .project-card:hover .image-overlay {
@@ -155,13 +157,13 @@
 }
 
 .project-category {
-  background: rgba(10, 131, 237, 0.2);
+  background: rgba(10, 131, 237, 0.25);
   border: 1px solid rgba(10, 131, 237, 0.4);
-  color: #0a83ed;
+  color: #ffffff;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   backdrop-filter: blur(10px);
 }
 
@@ -180,15 +182,15 @@
 }
 
 .status-badge.live {
-  background: rgba(10, 131, 237, 0.15);
-  border: 1px solid rgba(10, 131, 237, 0.3);
-  color: #0a83ed;
+  background: rgba(10, 131, 237, 0.25);
+  border: 1px solid rgba(10, 131, 237, 0.4);
+  color: #ffffff;
 }
 
 .status-badge.development {
-  background: rgba(253, 73, 73, 0.15);
-  border: 1px solid rgba(253, 73, 73, 0.3);
-  color: #fd4949;
+  background: rgba(253, 73, 73, 0.25);
+  border: 1px solid rgba(253, 73, 73, 0.4);
+  color: #ffffff;
 }
 
 /* Project Content */
