@@ -40,7 +40,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #00ff88, #ff6b00);
+  background: linear-gradient(180deg, #0a83ed, #2b303a);
   opacity: 0.6;
 }
 
@@ -75,7 +75,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00ff88, #ff6b00);
+  background: linear-gradient(135deg, #0a83ed, #2b303a);
   border: 3px solid #0f0f23;
   position: relative;
   z-index: 2;
@@ -104,7 +104,7 @@
 .timeline-line {
   width: 2px;
   height: 80px;
-  background: linear-gradient(180deg, rgba(0, 255, 136, 0.6), rgba(255, 107, 0, 0.6));
+  background: linear-gradient(180deg, rgba(10, 131, 237, 0.5), rgba(253, 73, 73, 0.5));
   margin-top: 10px;
 }
 
@@ -128,12 +128,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(10, 131, 237, 0.5), transparent);
 }
 
 .experience-card:hover .experience-content {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(0, 255, 136, 0.3);
+  border-color: rgba(10, 131, 237, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -181,8 +181,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #00ff88, #ff6b00);
-  color: #ffffff;
+  background: linear-gradient(135deg, #0a83ed, #2b303a);
+  color: #2b303a;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -192,7 +192,7 @@
 }
 
 .position-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 5px;
@@ -200,7 +200,7 @@
 }
 
 .company-name {
-  color: #00ff88;
+  color: #0a83ed;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 8px;
@@ -217,7 +217,7 @@
 .duration,
 .job-type,
 .location {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -252,7 +252,7 @@
 }
 
 .highlights-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 15px;
@@ -265,7 +265,7 @@
   content: '';
   width: 4px;
   height: 16px;
-  background: linear-gradient(180deg, #00ff88, #ff6b00);
+  background: linear-gradient(180deg, #0a83ed, #2b303a);
   border-radius: 2px;
 }
 
@@ -287,13 +287,13 @@
 }
 
 .highlight-item:hover {
-  background: rgba(0, 255, 136, 0.05);
+  background: rgba(10, 131, 237, 0.05);
   border-color: rgba(0, 255, 136, 0.2);
 }
 
 .highlight-icon {
   font-size: 1.1rem;
-  filter: drop-shadow(0 0 8px #00ff88);
+  filter: drop-shadow(0 0 8px #0a83ed);
 }
 
 .highlight-item span {
@@ -308,7 +308,7 @@
 }
 
 .achievements-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 15px;
@@ -340,7 +340,7 @@
 
 .achievement-bullet {
   font-size: 1rem;
-  filter: drop-shadow(0 0 8px #ff6b00);
+  filter: drop-shadow(0 0 8px #fd4949);
 }
 
 .achievement-item span {
@@ -356,7 +356,7 @@
 }
 
 .tech-section-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 15px;
@@ -369,7 +369,7 @@
   content: '';
   width: 4px;
   height: 16px;
-  background: linear-gradient(180deg, #00ff88, #ff6b00);
+  background: linear-gradient(180deg, #0a83ed, #2b303a);
   border-radius: 2px;
 }
 
@@ -382,7 +382,7 @@
 .tech-tag {
   background: rgba(0, 255, 136, 0.1);
   border: 1px solid rgba(0, 255, 136, 0.3);
-  color: #00ff88;
+  color: #0a83ed;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -392,10 +392,10 @@
 }
 
 .tech-tag:hover {
-  background: rgba(0, 255, 136, 0.2);
+  background: rgba(10, 131, 237, 0.2);
   border-color: rgba(0, 255, 136, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 4px 12px rgba(10, 131, 237, 0.2);
 }
 
 /* Experience Summary */
@@ -415,18 +415,18 @@
 }
 
 .summary-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, #00ff88, #ff6b00);
+  background: linear-gradient(135deg, #0a83ed, #2b303a);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .summary-description {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 30px;
@@ -449,7 +449,7 @@
 .stat-number {
   font-size: 2.2rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #00ff88, #ff6b00);
+  background: linear-gradient(135deg, #0a83ed, #2b303a);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -457,7 +457,7 @@
 }
 
 .stat-label {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
