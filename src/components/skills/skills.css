@@ -1,7 +1,7 @@
 /* Skills Section */
 .container-skills {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+  background: linear-gradient(135deg, #f9f9f9 0%, #f2f3f3 50%, #e5e6e7 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -14,8 +14,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 107, 0, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 80%, rgba(10, 131, 237, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(43, 48, 58, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .skills-description {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 1.2rem;
   margin-top: 20px;
   max-width: 600px;
@@ -65,7 +65,7 @@
 .filter-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
+  color: #2b303a;
   padding: 12px 24px;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -77,15 +77,15 @@
 
 .filter-btn:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(0, 255, 136, 0.5);
-  color: #ffffff;
+  border-color: rgba(10, 131, 237, 0.5);
+  color: #2b303a;
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
-  border-color: #00ff88;
-  color: #000000;
+  background: #0a83ed;
+  border-color: #0a83ed;
+  color: #2b303a;
   font-weight: 600;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .category-title {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 30px;
@@ -115,7 +115,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #00ff88, #ff6b00);
+  background: #0a83ed;
   border-radius: 2px;
 }
 
@@ -148,7 +148,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(10, 131, 237, 0.5), transparent);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }
@@ -159,7 +159,7 @@
 
 .skill-card:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 255, 136, 0.3);
+  border-color: rgba(10, 131, 237, 0.3);
   transform: translateY(-5px);
 }
 
@@ -175,19 +175,19 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3));
+  filter: drop-shadow(0 0 10px rgba(10, 131, 237, 0.3));
   transition: all 0.3s ease;
 }
 
 .skill-card:hover .skill-icon {
-  filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.6));
+  filter: drop-shadow(0 0 20px rgba(10, 131, 237, 0.6));
   transform: scale(1.1);
 }
 
 .skill-icon-fallback {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: #0a83ed;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -199,7 +199,7 @@
 
 /* Skill Name */
 .skill-name {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -228,7 +228,7 @@
   top: 10px;
   right: 10px;
   background: rgba(0, 0, 0, 0.8);
-  color: #00ff88;
+  color: #0a83ed;
   padding: 4px 8px;
   border-radius: 10px;
   font-size: 0.7rem;
@@ -271,7 +271,7 @@
 }
 
 .stat-label {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -281,7 +281,7 @@
 /* Touch Button (existing) */
 .touch-button {
   display: inline-block;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: #0a83ed;
   color: #000000;
   padding: 12px 30px;
   border-radius: 50px;
