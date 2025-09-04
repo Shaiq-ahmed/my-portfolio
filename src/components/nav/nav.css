@@ -321,8 +321,11 @@ body.menu-open {
 /* Active State */
 .nav-link.active {
   color: #0a83ed;
+  background: rgba(10, 131, 237, 0.08);
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
 .nav-link.active::after {
-  width: 100%;
+  width: 0;
 }
