@@ -292,7 +292,7 @@
   content: '';
   width: 3px;
   height: 12px;
-  background: linear-gradient(180deg, #00ff88, #00cc6a);
+  background: linear-gradient(180deg, #0a83ed, #00cc6a);
   border-radius: 2px;
 }
 
@@ -356,7 +356,7 @@
   content: '';
   width: 3px;
   height: 12px;
-  background: linear-gradient(180deg, #00ff88, #ff6b00);
+  background: linear-gradient(180deg, #0a83ed, #ff6b00);
   border-radius: 2px;
 }
 
@@ -412,7 +412,7 @@
 }
 
 .demo-btn {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: linear-gradient(135deg, #0a83ed, #00cc6a);
   color: #000000;
   box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
@@ -471,7 +471,7 @@
   height: 60px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid rgba(0,255,136,0.2);
+  border: 1px solid rgba(10, 131, 237, 0.2);
   background: #181830;
   transition: transform 0.2s;
 }
