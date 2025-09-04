@@ -27,12 +27,26 @@ const Nav = () => {
   }, [menu]);
 
   useEffect(() => {
+    const sections = ['about', 'skills', 'work', 'projects', 'contact'];
     const handleScroll = () => {
       const offset = window.scrollY;
       setScrolled(offset > 50);
+      let current = '';
+      for (let i = 0; i < sections.length; i++) {
+        const el = document.getElementById(sections[i]);
+        if (!el) continue;
+        const top = el.offsetTop - 120; // account for navbar height
+        const bottom = top + el.offsetHeight;
+        if (offset >= top && offset < bottom) {
+          current = sections[i];
+          break;
+        }
+      }
+      setActive(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -63,7 +77,7 @@ const Nav = () => {
           <ul className={`nav-list ${menu ? "show" : ""}`}>
             {navItems.map((item, index) => (
               <li key={index} onClick={closeMenu}>
-                <a href={item.href} className="nav-link">
+                <a href={item.href} className={`nav-link ${active === item.href.replace('#','') ? 'active' : ''}`}>
                   {item.label}
                 </a>
               </li>
