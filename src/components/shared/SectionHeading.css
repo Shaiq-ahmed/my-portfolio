@@ -15,8 +15,8 @@
 .heading-badge {
   position: relative;
   display: inline-block;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(255, 107, 0, 0.15));
-  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: linear-gradient(135deg, rgba(10, 131, 237, 0.12), rgba(43, 48, 58, 0.12));
+  border: 1px solid rgba(10, 131, 237, 0.3);
   border-radius: 50px;
   padding: 12px 30px;
   margin-bottom: 20px;
@@ -45,12 +45,12 @@
 .badge-text {
   position: relative;
   z-index: 2;
-  color: #ffffff;
+  color: #2b303a;
   font-weight: 600;
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  text-shadow: 0 0 10px rgba(10, 131, 237, 0.4);
 }
 
 .badge-glow {
@@ -60,7 +60,7 @@
   transform: translate(-50%, -50%);
   width: 120%;
   height: 120%;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(10, 131, 237, 0.1) 0%, transparent 70%);
   border-radius: 50px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -84,21 +84,21 @@
 }
 
 .section-heading.primary .section-title {
-  background: linear-gradient(135deg, #00ff88 0%, #ffffff 50%, #ff6b00 100%);
+  background: linear-gradient(135deg, #2b303a 0%, #0a83ed 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .section-heading.secondary .section-title {
-  background: linear-gradient(135deg, #ff6b00 0%, #ffffff 50%, #00ff88 100%);
+  background: linear-gradient(135deg, #2b303a 0%, #0a83ed 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .section-description {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 1.2rem;
   line-height: 1.7;
   margin: 20px 0 0 0;
@@ -113,11 +113,11 @@
 
 .heading-divider {
   height: 3px;
-  background: linear-gradient(90deg, #00ff88, #ff6b00);
+  background: #0a83ed;
   border-radius: 2px;
   margin: 30px auto 0;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 20px rgba(10, 131, 237, 0.4);
 }
 
 .section-heading.centered .heading-divider {
@@ -202,7 +202,7 @@
   }
   
   .badge-text {
-    color: #ffffff;
+    color: #2b303a;
     text-shadow: none;
   }
   
