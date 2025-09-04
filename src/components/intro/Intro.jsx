@@ -13,6 +13,7 @@ const Intro = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+  const [showProfileModal, setShowProfileModal] = useState(false);
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -171,67 +172,27 @@ const Intro = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
         >
           <div className="intro-image-container">
-            <motion.div
-              className="image-glow"
-              animate={{ 
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.8, 0.5]
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <svg
-              className="intro-image"
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="profile-frame"
+              role="button"
+              tabIndex={0}
+              onClick={() => setShowProfileModal(true)}
+              onKeyDown={(e) => (e.key === 'Enter' ? setShowProfileModal(true) : null)}
             >
-              <defs>
-                <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#0a83ed" />
-                  <stop offset="50%" stopColor="#fd4949" />
-                  <stop offset="100%" stopColor="#2b303a" />
-                </linearGradient>
-                <clipPath id="clip-path">
-                  <path
-                    d="M44.7,-64C57.2,-52.3,66.3,-38.4,69.9,-23.6C73.5,-8.8,71.6,6.9,65.4,19.8C59.2,32.7,48.8,42.7,37.2,47.8C25.5,52.9,12.8,53,1.4,51.1C-10,49.1,-19.9,45.1,-34,40.8C-48,36.6,-66.2,32,-75.6,20.5C-85,8.9,-85.6,-9.6,-79,-24.3C-72.3,-39.1,-58.4,-50.1,-44,-61.2C-29.6,-72.2,-14.8,-83.4,0.6,-84.2C16,-85.1,32.1,-75.7,44.7,-64Z"
-                    transform="translate(100 100)"
-                  />
-                </clipPath>
-              </defs>
-
-              <motion.path
-                d="M44.7,-64C57.2,-52.3,66.3,-38.4,69.9,-23.6C73.5,-8.8,71.6,6.9,65.4,19.8C59.2,32.7,48.8,42.7,37.2,47.8C25.5,52.9,12.8,53,1.4,51.1C-10,49.1,-19.9,45.1,-34,40.8C-48,36.6,-66.2,32,-75.6,20.5C-85,8.9,-85.6,-9.6,-79,-24.3C-72.3,-39.1,-58.4,-50.1,-44,-61.2C-29.6,-72.2,-14.8,-83.4,0.6,-84.2C16,-85.1,32.1,-75.7,44.7,-64Z"
-                transform="translate(100 100)"
-                fill="url(#blobGradient)"
-                animate={{
-                  d: [
-                    "M44.7,-64C57.2,-52.3,66.3,-38.4,69.9,-23.6C73.5,-8.8,71.6,6.9,65.4,19.8C59.2,32.7,48.8,42.7,37.2,47.8C25.5,52.9,12.8,53,1.4,51.1C-10,49.1,-19.9,45.1,-34,40.8C-48,36.6,-66.2,32,-75.6,20.5C-85,8.9,-85.6,-9.6,-79,-24.3C-72.3,-39.1,-58.4,-50.1,-44,-61.2C-29.6,-72.2,-14.8,-83.4,0.6,-84.2C16,-85.1,32.1,-75.7,44.7,-64Z",
-                    "M39.1,-67.8C48.6,-60.2,53.2,-42.6,62.3,-24.5C71.4,-6.4,85,12.2,84.1,29.7C83.2,47.1,67.8,63.4,49.2,71.1C30.6,78.8,8.8,77.9,-10.6,72.8C-30,67.7,-47,58.4,-59.4,44.4C-71.8,30.4,-79.6,11.7,-80.7,-8.3C-81.8,-28.3,-76.2,-49.6,-64.1,-58.4C-52,-67.2,-33.4,-63.5,-16.2,-61.9C1,-60.3,19.6,-75.4,39.1,-67.8Z",
-                    "M44.7,-64C57.2,-52.3,66.3,-38.4,69.9,-23.6C73.5,-8.8,71.6,6.9,65.4,19.8C59.2,32.7,48.8,42.7,37.2,47.8C25.5,52.9,12.8,53,1.4,51.1C-10,49.1,-19.9,45.1,-34,40.8C-48,36.6,-66.2,32,-75.6,20.5C-85,8.9,-85.6,-9.6,-79,-24.3C-72.3,-39.1,-58.4,-50.1,-44,-61.2C-29.6,-72.2,-14.8,-83.4,0.6,-84.2C16,-85.1,32.1,-75.7,44.7,-64Z"
-                  ]
-                }}
-                transition={{ 
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-
-              <image
-                xlinkHref={profile}
-                x="0"
-                y="20"
-                width="200"
-                height="200"
-                clipPath="url(#clip-path)"
-              />
-            </svg>
+              <img src={profile} alt="Shaiq Ahmed portrait" className="profile-photo" />
+            </div>
           </div>
         </motion.div>
       </motion.div>
+
+      {showProfileModal && (
+        <div className="profile-modal-backdrop" onClick={() => setShowProfileModal(false)}>
+          <div className="profile-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="profile-modal-close" onClick={() => setShowProfileModal(false)} aria-label="Close photo">×</button>
+            <img src={profile} alt="Shaiq Ahmed portrait large" className="profile-modal-photo" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
