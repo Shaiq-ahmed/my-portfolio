@@ -50,7 +50,13 @@
 
 .touch-button.primary:hover {
   background: #0a83ed;
+  color: #ffffff;
   box-shadow: 0 20px 40px rgba(10, 131, 237, 0.4);
+}
+
+.touch-button:hover .button-text,
+.touch-button:hover .button-icon {
+  color: currentColor;
 }
 
 .touch-button.secondary {
