@@ -224,7 +224,7 @@
 
 .action-btn.primary {
   background: #0a83ed;
-  color: #000000;
+  color: #ffffff;
 }
 
 .action-btn.primary:hover {
@@ -485,7 +485,7 @@
   align-items: center;
   gap: 12px;
   background: #0a83ed;
-  color: #000000;
+  color: #ffffff;
   padding: 15px 30px;
   border-radius: 50px;
   font-weight: 600;
