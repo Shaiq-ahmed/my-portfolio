@@ -65,18 +65,11 @@
 }
 
 .name-highlight {
-  background: linear-gradient(135deg, #0a83ed, #2b303a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Playfair Display', 'Manrope', serif;
+  color: #2b303a;
+  font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   font-weight: 700;
   letter-spacing: 0.2px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: #0a83ed;
-  text-underline-offset: 6px;
 }
 
 .intro-wave {
@@ -210,26 +203,13 @@
 
 .intro-image-container {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
 }
 
-.image-glow {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: radial-gradient(circle, rgba(10, 131, 237, 0.25), transparent 70%);
-  border-radius: 50%;
-  z-index: -1;
-}
+.image-glow { display: none; }
 
-.intro-image {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
-}
+.intro-image { display: none; }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -360,3 +340,59 @@
 
 /* Utility */
 .inline-element { display: inline-block; }
+
+/* Professional avatar */
+.profile-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(43, 48, 58, 0.15);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  background: transparent;
+  cursor: zoom-in;
+}
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Modal */
+.profile-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.profile-modal {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 90vw;
+  max-height: 85vh;
+  padding: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+.profile-modal-photo {
+  width: 70vw;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+.profile-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
