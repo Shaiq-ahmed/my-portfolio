@@ -36,9 +36,9 @@ const Intro = () => {
   }, [isInView, mainControls]);
 
   const techHighlights = [
-    { icon: FaCode, text: "Frontend Development", color: "#00ff88" },
-    { icon: FaServer, text: "Backend APIs", color: "#ff6b00" },
-    { icon: FaDatabase, text: "Database Design", color: "#3b82f6" }
+    { icon: FaCode, text: "Frontend Development", color: "#0a83ed" },
+    { icon: FaServer, text: "Backend APIs", color: "#fd4949" },
+    { icon: FaDatabase, text: "Database Design", color: "#0a83ed" }
   ];
 
   return (
