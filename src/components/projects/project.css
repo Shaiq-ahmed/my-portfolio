@@ -1,7 +1,7 @@
 /* Projects Section */
 .container-project {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+  background: linear-gradient(135deg, #f9f9f9 0%, #f2f3f3 50%, #e5e6e7 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -14,8 +14,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 70%, rgba(255, 107, 0, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 30%, rgba(10, 131, 237, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(43, 48, 58, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -38,7 +38,7 @@
 /* Project Card */
 .project-card {
   background: linear-gradient(135deg, #181830 60%, #23234a 100%);
-  border: 1.5px solid rgba(0, 255, 136, 0.12);
+  border: 1.5px solid rgba(10, 131, 237, 0.12);
   border-radius: 24px;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -54,10 +54,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(255, 107, 0, 0.05));
+  background: linear-gradient(135deg, rgba(10, 131, 237, 0.05), rgba(43, 48, 58, 0.05));
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
+  z-index: 0;
 }
 
 .project-card:hover::before {
@@ -65,8 +66,8 @@
 }
 
 .project-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(0, 255, 136, 0.3);
+  background: linear-gradient(135deg, #181830 60%, #23234a 100%);
+  border-color: rgba(10, 131, 237, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -75,12 +76,13 @@
   position: relative;
   height: 260px;
   overflow: hidden;
-  border-radius: 20px 20px 0 0;
+  border-radius: 24px 24px 0 0;
   background: linear-gradient(135deg, #fff 60%, #e0f7fa 100%);
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  z-index: 1;
 }
 
 .project-logo-container {
@@ -118,9 +120,10 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
-  border-radius: 0 0 20px 20px;
-  z-index: 1;
+  border-radius: 0;
+  z-index: 0;
   background: #181830;
+  display: block;
 }
 
 .project-card:hover .project-image {
@@ -140,6 +143,8 @@
   padding: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
+  color: #ffffff;
 }
 
 .project-card:hover .image-overlay {
@@ -151,16 +156,17 @@
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
+  color: #ffffff;
 }
 
 .project-category {
-  background: rgba(0, 255, 136, 0.2);
-  border: 1px solid rgba(0, 255, 136, 0.4);
-  color: #00ff88;
+  background: rgba(10, 131, 237, 0.25);
+  border: 1px solid rgba(10, 131, 237, 0.4);
+  color: #ffffff;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   backdrop-filter: blur(10px);
 }
 
@@ -179,20 +185,22 @@
 }
 
 .status-badge.live {
-  background: rgba(34, 197, 94, 0.2);
-  border: 1px solid rgba(34, 197, 94, 0.4);
-  color: #22c55e;
+  background: rgba(10, 131, 237, 0.25);
+  border: 1px solid rgba(10, 131, 237, 0.4);
+  color: #ffffff;
 }
 
 .status-badge.development {
-  background: rgba(249, 115, 22, 0.2);
-  border: 1px solid rgba(249, 115, 22, 0.4);
-  color: #f97316;
+  background: rgba(253, 73, 73, 0.25);
+  border: 1px solid rgba(253, 73, 73, 0.4);
+  color: #ffffff;
 }
 
 /* Project Content */
 .project-content {
   padding: 18px 18px 30px 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .project-header {
@@ -230,8 +238,22 @@
   line-height: 1.3;
 }
 
+.project-card:hover .project-title,
+.project-card:hover .project-subtitle,
+.project-card:hover .project-description,
+.project-card:hover .duration,
+.project-card:hover .team-size,
+.project-card:hover .project-role,
+.project-card:hover .features-title,
+.project-card:hover .challenges-title,
+.project-card:hover .feature-item,
+.project-card:hover .challenge-item,
+.project-card:hover .tech-title {
+  color: #ffffff;
+}
+
 .project-subtitle {
-  color: #00ff88;
+  color: #0a83ed;
   font-size: 0.95rem;
   font-weight: 500;
   margin: 0;
@@ -250,6 +272,9 @@
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+/* Ensure all direct children are above the hover overlay */
+.project-card > * { position: relative; z-index: 1; }
 
 .project-description {
   color: #e2e8f0;
@@ -292,7 +317,7 @@
   content: '';
   width: 3px;
   height: 12px;
-  background: linear-gradient(180deg, #00ff88, #00cc6a);
+  background: linear-gradient(180deg, #0a83ed, #2b303a);
   border-radius: 2px;
 }
 
@@ -300,7 +325,7 @@
   content: '';
   width: 3px;
   height: 12px;
-  background: linear-gradient(180deg, #ff6b00, #ff4500);
+  background: #fd4949;
   border-radius: 2px;
 }
 
@@ -325,14 +350,14 @@
 }
 
 .feature-bullet {
-  color: #00ff88;
+  color: #0a83ed;
   font-weight: bold;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .challenge-bullet {
-  color: #ff6b00;
+  color: #fd4949;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -356,7 +381,7 @@
   content: '';
   width: 3px;
   height: 12px;
-  background: linear-gradient(180deg, #00ff88, #ff6b00);
+  background: linear-gradient(180deg, #0a83ed, #fd4949);
   border-radius: 2px;
 }
 
@@ -367,9 +392,9 @@
 }
 
 .tech-badge {
-  background: rgba(0, 255, 136, 0.1);
-  border: 1px solid rgba(0, 255, 136, 0.3);
-  color: #00ff88;
+  background: rgba(10, 131, 237, 0.1);
+  border: 1px solid rgba(10, 131, 237, 0.3);
+  color: #0a83ed;
   padding: 4px 10px;
   border-radius: 16px;
   font-size: 0.75rem;
@@ -378,8 +403,8 @@
 }
 
 .tech-badge:hover {
-  background: rgba(0, 255, 136, 0.2);
-  border-color: rgba(0, 255, 136, 0.5);
+  background: rgba(10, 131, 237, 0.2);
+  border-color: rgba(10, 131, 237, 0.5);
   transform: translateY(-1px);
 }
 
@@ -412,15 +437,15 @@
 }
 
 .demo-btn {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
-  color: #000000;
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  background: linear-gradient(135deg, #0a83ed, #2b303a);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(10, 131, 237, 0.3);
 }
 
 .demo-btn:hover {
-  background: linear-gradient(135deg, #00cc6a, #00aa55);
+  background: linear-gradient(135deg, #0a83ed, #2b303a);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+  box-shadow: 0 6px 20px rgba(10, 131, 237, 0.4);
 }
 
 /* Project Logo */
@@ -471,13 +496,13 @@
   height: 60px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid rgba(0,255,136,0.2);
+  border: 1px solid rgba(10, 131, 237, 0.2);
   background: #181830;
   transition: transform 0.2s;
 }
 .project-carousel-image:hover {
   transform: scale(1.08);
-  border-color: #00ff88;
+  border-color: #0a83ed;
 }
 
 /* Project Video */

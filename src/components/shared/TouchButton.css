@@ -13,7 +13,7 @@
   border: none;
   outline: none;
   user-select: none;
-  box-shadow: 0 15px 35px rgba(0, 255, 136, 0.25);
+  box-shadow: 0 15px 35px rgba(10, 131, 237, 0.25);
 }
 
 /* Button Content */
@@ -43,14 +43,14 @@
 
 /* Button Variants */
 .touch-button.primary {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
-  color: #000000;
-  box-shadow: 0 15px 35px rgba(0, 255, 136, 0.3);
+  background: #0a83ed;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(10, 131, 237, 0.3);
 }
 
 .touch-button.primary:hover {
-  background: linear-gradient(135deg, #00cc6a, #00aa55);
-  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.4);
+  background: #0a83ed;
+  box-shadow: 0 20px 40px rgba(10, 131, 237, 0.4);
 }
 
 .touch-button.secondary {
@@ -62,19 +62,19 @@
 
 .touch-button.secondary:hover {
   background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(0, 255, 136, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+  border-color: rgba(10, 131, 237, 0.4);
+  box-shadow: 0 20px 40px rgba(10, 131, 237, 0.2);
 }
 
 .touch-button.accent {
-  background: linear-gradient(135deg, #ff6b00, #ff4500);
+  background: #fd4949;
   color: #ffffff;
-  box-shadow: 0 15px 35px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(253, 73, 73, 0.3);
 }
 
 .touch-button.accent:hover {
-  background: linear-gradient(135deg, #ff4500, #ff3000);
-  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.4);
+  background: #fd4949;
+  box-shadow: 0 20px 40px rgba(253, 73, 73, 0.4);
 }
 
 /* Button Sizes */
@@ -122,7 +122,7 @@
   transform: translate(-50%, -50%);
   width: 120%;
   height: 120%;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(10, 131, 237, 0.1) 0%, transparent 70%);
   border-radius: 50px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -154,7 +154,7 @@
 }
 
 .touch-button:focus {
-  outline: 2px solid rgba(0, 255, 136, 0.5);
+  outline: 2px solid rgba(10, 131, 237, 0.5);
   outline-offset: 3px;
 }
 
@@ -166,7 +166,7 @@
 
 .touch-button:disabled:hover {
   transform: none !important;
-  box-shadow: 0 15px 35px rgba(0, 255, 136, 0.15) !important;
+  box-shadow: 0 15px 35px rgba(10, 131, 237, 0.15) !important;
 }
 
 /* Responsive Design */
@@ -264,7 +264,7 @@
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .touch-button.primary {
-    background: #00ff88;
+    background: #0a83ed;
     color: #000000;
     border: 2px solid #000000;
   }
@@ -276,7 +276,7 @@
   }
   
   .touch-button.accent {
-    background: #ff6b00;
+    background: #fd4949;
     color: #ffffff;
     border: 2px solid #ffffff;
   }

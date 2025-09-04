@@ -233,7 +233,6 @@ const Project = () => {
                       muted
                       loop
                       playsInline
-                      style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius: '0', background: '#000' }}
                     />
                   </div>
                 )}

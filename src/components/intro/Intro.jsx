@@ -36,9 +36,9 @@ const Intro = () => {
   }, [isInView, mainControls]);
 
   const techHighlights = [
-    { icon: FaCode, text: "Frontend Development", color: "#00ff88" },
-    { icon: FaServer, text: "Backend APIs", color: "#ff6b00" },
-    { icon: FaDatabase, text: "Database Design", color: "#3b82f6" }
+    { icon: FaCode, text: "Frontend Development", color: "#0a83ed" },
+    { icon: FaServer, text: "Backend APIs", color: "#fd4949" },
+    { icon: FaDatabase, text: "Database Design", color: "#0a83ed" }
   ];
 
   return (
@@ -74,7 +74,7 @@ const Intro = () => {
             <motion.div
               animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
               transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
-              style={{ display: "inline-block" }}
+              className="inline-element"
             >
               <PiHandWavingDuotone className="intro-wave" />
             </motion.div>
@@ -104,7 +104,7 @@ const Intro = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <tech.icon className="tech-icon" style={{ color: tech.color }} />
+                <tech.icon className="tech-icon" />
                 <span>{tech.text}</span>
               </motion.div>
             ))}
@@ -190,9 +190,9 @@ const Intro = () => {
             >
               <defs>
                 <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#00ff88" />
-                  <stop offset="50%" stopColor="#ff6b00" />
-                  <stop offset="100%" stopColor="#3b82f6" />
+                  <stop offset="0%" stopColor="#0a83ed" />
+                  <stop offset="50%" stopColor="#fd4949" />
+                  <stop offset="100%" stopColor="#2b303a" />
                 </linearGradient>
                 <clipPath id="clip-path">
                   <path

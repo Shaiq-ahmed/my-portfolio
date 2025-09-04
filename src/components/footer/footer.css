@@ -1,6 +1,6 @@
 /* Footer */
 .footer-main {
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+  background: linear-gradient(135deg, #f9f9f9 0%, #f2f3f3 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   overflow: hidden;
@@ -32,14 +32,14 @@
 .brand-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: #0a83ed;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   color: #000000;
-  box-shadow: 0 10px 25px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 10px 25px rgba(10, 131, 237, 0.3);
 }
 
 .brand-text {
@@ -47,7 +47,7 @@
 }
 
 .brand-name {
-  color: #ffffff;
+  color: #2b303a;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
@@ -55,7 +55,7 @@
 }
 
 .brand-title {
-  color: #00ff88;
+  color: #0a83ed;
   font-size: 0.9rem;
   font-weight: 500;
   margin: 0;
@@ -69,7 +69,7 @@
 }
 
 .footer-description p {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
@@ -78,7 +78,7 @@
 /* Footer Divider */
 .footer-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #00ff88, #ff6b00, #3b82f6, transparent);
+  background: linear-gradient(90deg, transparent, #0a83ed, #fd4949, #2b303a, transparent);
   margin: 40px 0;
   transform-origin: center;
 }
@@ -97,7 +97,7 @@
 }
 
 .footer-text {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 0.9rem;
   margin: 0 0 10px 0;
   display: flex;
@@ -107,7 +107,7 @@
 }
 
 .heart-icon {
-  color: #ff6b00;
+  color: #fd4949;
   font-size: 0.8rem;
   animation: heartbeat 2s ease-in-out infinite;
 }
@@ -118,7 +118,7 @@
 }
 
 .laptop-icon {
-  color: #3b82f6;
+  color: #0a83ed;
   font-size: 1rem;
   margin-left: 5px;
 }
@@ -132,17 +132,17 @@
 }
 
 .tech-item {
-  color: #00ff88;
+  color: #0a83ed;
   font-size: 0.8rem;
   font-weight: 500;
   padding: 2px 8px;
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(10, 131, 237, 0.1);
   border-radius: 10px;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: 1px solid rgba(10, 131, 237, 0.2);
 }
 
 .tech-separator {
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 0.8rem;
 }
 
@@ -153,7 +153,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  color: #94a3b8;
+  color: #2b303a;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -164,10 +164,10 @@
 }
 
 .scroll-to-top:hover {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
-  color: #000000;
-  border-color: #00ff88;
-  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+  background: #0a83ed;
+  color: #2b303a;
+  border-color: #0a83ed;
+  box-shadow: 0 5px 15px rgba(10, 131, 237, 0.3);
 }
 
 /* Footer Quote */
@@ -189,7 +189,7 @@
 }
 
 .quote-icon {
-  color: #ff6b00;
+  color: #fd4949;
   font-size: 1.5rem;
   animation: steam 3s ease-in-out infinite;
 }
@@ -200,7 +200,7 @@
 }
 
 .quote-text {
-  color: #94a3b8;
+  color: #2b303a;
   font-style: italic;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -229,7 +229,7 @@
 .bg-element-1 {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: #0a83ed;
   top: 20%;
   left: 10%;
   animation-delay: 0s;
@@ -238,7 +238,7 @@
 .bg-element-2 {
   width: 150px;
   height: 150px;
-  background: linear-gradient(135deg, #ff6b00, #ff4500);
+  background: #fd4949;
   top: 60%;
   right: 15%;
   animation-delay: 2s;
@@ -247,7 +247,7 @@
 .bg-element-3 {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: #0a83ed;
   bottom: 30%;
   left: 20%;
   animation-delay: 4s;
