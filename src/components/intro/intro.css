@@ -42,9 +42,9 @@
 
 .intro-badge {
   display: inline-block;
-  background: linear-gradient(135deg, rgba(10, 131, 237, 0.15), rgba(43, 48, 58, 0.15));
-  border: 1px solid rgba(10, 131, 237, 0.3);
-  color: #0a83ed;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(43, 48, 58, 0.15);
+  color: #2b303a;
   padding: 8px 20px;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -65,7 +65,7 @@
 }
 
 .name-highlight {
-  color: #2b303a;
+  color: #111827;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   font-weight: 700;
@@ -87,8 +87,8 @@
 }
 
 .highlight {
-  color: #0a83ed;
-  font-weight: 600;
+  color: #1f2937;
+  font-weight: 700;
 }
 
 /* Tech Highlights */
@@ -335,7 +335,7 @@
 }
 
 .intro-image-container {
-  animation: float 3s ease-in-out infinite;
+  animation: none;
 }
 
 /* Utility */
