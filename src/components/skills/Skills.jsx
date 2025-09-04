@@ -18,9 +18,9 @@ const SkillCard = ({ skill, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ 
-        scale: 1.05, 
-        boxShadow: `0 10px 30px rgba(0, 255, 136, 0.4)`
+      whileHover={{
+        scale: 1.05,
+        boxShadow: `0 10px 30px rgba(10, 131, 237, 0.35)`
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
