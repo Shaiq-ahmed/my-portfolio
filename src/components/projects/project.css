@@ -179,15 +179,15 @@
 }
 
 .status-badge.live {
-  background: rgba(34, 197, 94, 0.2);
-  border: 1px solid rgba(34, 197, 94, 0.4);
-  color: #22c55e;
+  background: rgba(10, 131, 237, 0.15);
+  border: 1px solid rgba(10, 131, 237, 0.3);
+  color: #0a83ed;
 }
 
 .status-badge.development {
-  background: rgba(249, 115, 22, 0.2);
-  border: 1px solid rgba(249, 115, 22, 0.4);
-  color: #f97316;
+  background: rgba(253, 73, 73, 0.15);
+  border: 1px solid rgba(253, 73, 73, 0.3);
+  color: #fd4949;
 }
 
 /* Project Content */
