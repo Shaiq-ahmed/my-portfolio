@@ -7,15 +7,15 @@
   z-index: 1000;
   padding: 20px 0;
   transition: all 0.3s ease;
-  background: rgba(15, 15, 35, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container.scrolled {
   padding: 15px 0;
-  background: rgba(15, 15, 35, 0.95);
-  border-bottom-color: rgba(0, 255, 136, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom-color: rgba(10, 131, 237, 0.2);
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -46,7 +46,7 @@
 
 .logo-icon {
   font-size: 2rem;
-  color: #00ff88;
+  color: #0a83ed;
   padding: 8px;
   background: rgba(10, 131, 237, 0.1);
   border-radius: 10px;
@@ -62,13 +62,13 @@
 .logo-name {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #2b303a;
   line-height: 1;
 }
 
 .logo-title {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: #2b303a;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -95,7 +95,7 @@
 }
 
 .nav-link {
-  color: #94a3b8;
+  color: #2b303a;
   font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
@@ -111,12 +111,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #00ff88, #ff6b00);
+  background: #0a83ed;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: #2b303a;
 }
 
 .nav-link:hover::after {
@@ -129,8 +129,8 @@
 }
 
 .download-cv {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
-  color: #000000;
+  background: #0a83ed;
+  color: #ffffff;
   padding: 12px 24px;
   border-radius: 50px;
   font-weight: 600;
@@ -139,14 +139,14 @@
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 5px 15px rgba(10, 131, 237, 0.3);
   white-space: nowrap;
 }
 
 .download-cv:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
-  background: linear-gradient(135deg, #00cc6a, #00aa5a);
+  box-shadow: 0 8px 25px rgba(10, 131, 237, 0.4);
+  background: #0a83ed;
 }
 
 /* Menu Toggle */
@@ -154,7 +154,7 @@
   display: none;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  color: #2b303a;
   padding: 12px;
   border-radius: 10px;
   font-size: 1.5rem;
@@ -301,13 +301,13 @@ body.menu-open {
 .nav-link:focus,
 .download-cv:focus,
 .menu-toggle:focus {
-  outline: 2px solid rgba(0, 255, 136, 0.5);
+  outline: 2px solid rgba(10, 131, 237, 0.5);
   outline-offset: 2px;
 }
 
 /* Active State */
 .nav-link.active {
-  color: #00ff88;
+  color: #0a83ed;
 }
 
 .nav-link.active::after {
