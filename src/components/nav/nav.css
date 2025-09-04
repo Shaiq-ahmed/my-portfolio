@@ -12,11 +12,23 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.nav-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(10, 131, 237, 0.35), transparent);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .nav-container.scrolled {
-  padding: 15px 0;
+  padding: 14px 0;
   background: rgba(255, 255, 255, 0.95);
   border-bottom-color: rgba(10, 131, 237, 0.2);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
 }
 
 .nav-content {
@@ -84,7 +96,7 @@
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -98,6 +110,7 @@
   color: #2b303a;
   font-weight: 500;
   font-size: 0.95rem;
+  letter-spacing: 0.2px;
   text-decoration: none;
   padding: 8px 0;
   position: relative;
@@ -116,7 +129,7 @@
 }
 
 .nav-link:hover {
-  color: #2b303a;
+  color: #0a83ed;
 }
 
 .nav-link:hover::after {
